@@ -1,4 +1,6 @@
-<img src="src/assets/logo-comercial.png" width = 500 >
+<p align="center" width="100%">
+    <img src="src/assets/logo-comercial.png">
+</p>
 
 # TravelSation (Hackacode's project)
 
@@ -10,12 +12,16 @@ For other useful information about **Omega team** you can consult [our Confluenc
 
 ## Team **Omega**
 ### Front-end
-<div class="contributors">
-    <img src="https://avatars.githubusercontent.com/u/116075515?v=4" />
-</div>
+
+<a href="https://roost.ai">
+<img src=https://avatars.githubusercontent.com/u/116075515?v=4 height="40px" alt="Roost.AI" style="border-radius: 50%" />
+</a>
 
 ### Back-end
-<div class="contributors">
-    <img src="https://avatars.githubusercontent.com/u/98433880?v=4" />
-    <img src="https://avatars.githubusercontent.com/u/103342943?v=4" />
-</div>
+<a href="https://roost.ai">
+<img src=https://avatars.githubusercontent.com/u/98433880?v=4 height="40px" alt="Roost.AI" style="border-radius: 50%; margin-right: 10px" />
+</a>
+<a href="https://roost.ai">
+<img src=https://avatars.githubusercontent.com/u/103342943?v=4 height="40px" alt="Roost.AI" style="border-radius: 50%" />
+</a>
+
