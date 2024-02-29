@@ -13,15 +13,15 @@ For other useful information about **Omega team** you can consult [our Confluenc
 ## Team **Omega**
 ### Front-end
 
-<a href="https://roost.ai">
+<a href="https://github.com/jonathanMM97">
 <img src=https://avatars.githubusercontent.com/u/116075515?v=4 height="40px" alt="Roost.AI" style="border-radius: 50%" />
 </a>
 
 ### Back-end
-<a href="https://roost.ai">
+<a href="https://github.com/SebastianFurnier">
 <img src=https://avatars.githubusercontent.com/u/98433880?v=4 height="40px" alt="Roost.AI" style="border-radius: 50%; margin-right: 10px" />
 </a>
-<a href="https://roost.ai">
+<a href="https://github.com/Tomi-Gomez">
 <img src=https://avatars.githubusercontent.com/u/103342943?v=4 height="40px" alt="Roost.AI" style="border-radius: 50%" />
 </a>
 
