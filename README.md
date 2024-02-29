@@ -19,19 +19,3 @@ For other useful information about **Omega team** you can consult [our Confluenc
     <img src="https://avatars.githubusercontent.com/u/98433880?v=4" />
     <img src="https://avatars.githubusercontent.com/u/103342943?v=4" />
 </div>
-
-<style>
-.contributors {
-    width: 10%;
-    height: 10%;
-    display: flex;
-    justify-content: space-between;
-}
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 60px;
-    margin: 10px;
-}
-</style>
