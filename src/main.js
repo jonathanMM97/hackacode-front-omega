@@ -10,8 +10,8 @@ const app = createApp(App)
 const i18n = createI18n({
   locale: 'ES',
   messages: {
-    EN: EN,
-    ES: ES
+    EN,
+    ES
   }
 })
 
