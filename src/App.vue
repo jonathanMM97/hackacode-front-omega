@@ -1,47 +1,54 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <div class="header-content">
+      <img class="header-content__logo" src="./assets/logo-header.svg" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <div class="header-content__pages">
+        <NuxtLink> {{ $t('about-us') }} </NuxtLink>
+        <NuxtLink> {{ $t('customers') }} </NuxtLink>
+      </div>
+
+      <div class="header-content__functionalities">
+        <div class="header-content__functionalities-lenguage">{{ $t('lenguage') }}</div>
+        <div class="header-content__functionalities-theme">image</div>
+        <div class="header-content__functionalities-login">{{ $t('log-in') }}</div>
+        <div class="header-content__functionalities-message">M</div>
+      </div>
     </div>
   </header>
-
   <main>
-    <TheWelcome />
+  Hello world
   </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<style lang="scss">
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+.header-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rem(2px) rem(1px) rgba($bg-color-dark, 0.3);
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+  &__logo{
+    width: 150px;
+    height: auto;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  &__pages {
+    font-family: $font-family;
+    display: flex;
+    align-items: center;
+    gap: 50px;
   }
 
-  header .wrapper {
+  &__functionalities {
+    font-family: $font-family;
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 10px;
+    gap: 10px;
   }
 }
 </style>
