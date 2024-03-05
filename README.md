@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-    <img src="src/assets/logo-comercial.png">
+    <img src="public/media/logo-comercial.png">
 </p>
 
 # TravelSation (Hackacode's project)
@@ -24,4 +24,3 @@ For other useful information about **Omega team** you can consult [our Confluenc
 <a href="https://github.com/Tomi-Gomez">
 <img src=https://avatars.githubusercontent.com/u/103342943?v=4 height="40px" alt="Roost.AI" style="border-radius: 50%" />
 </a>
-

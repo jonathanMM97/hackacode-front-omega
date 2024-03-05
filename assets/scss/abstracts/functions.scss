@@ -1,5 +1,0 @@
-$browser-context: 16px;
-
-@function rem($pixels) {
-  @return #{calc($pixels / $browser-context)}rem;
-}
