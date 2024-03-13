@@ -2,5 +2,19 @@
   "language": "Eng",
   "about-us": "About us",
   "customers": "Customers",
-  "log-in": "Log in"
+  "log-in": "Log in",
+  "main": {
+    "slogan": "It is not just a trip, it is an experience.",
+    "second-section": {
+      "title": "A simple request equals a great experience",
+      "paragraph-1": "From TravelSation we work so that you don't have to organize every detail of your trip you want to have.",
+      "paragraph-2": "With a simple request you can forget about having to organize all the datails for you."
+    },
+    "third-section": {
+      "title": "For all people - all the peace of mind, no headaches at all.",
+      "paragraph-1": "You can be up and running in minutes and traveling as much as you want. Whatever your trip, TravelSation has you covered.",
+      "paragraph-2": "Can have trip priced as they see fit, TravelSation does not set a minimum price.",
+      "button": "Try it now"
+    }
+  }
 }

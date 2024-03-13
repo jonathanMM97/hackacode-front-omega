@@ -2,5 +2,19 @@
   "language": "Esp",
   "about-us": "Conócenos",
   "customers": "Clientes",
-  "log-in": "Inicia sesión"
+  "log-in": "Inicia sesión",
+  "main": {
+    "slogan": "No es solo un viaje, es una esperiencia.",
+    "second-section": {
+      "title": "Una sola solicitud consigue una gran experiencia.",
+      "paragraph-1": "Desde TravelSation trabajamos para que no tengas que organizar cada detalle del viaje que quieras tener.",
+      "paragraph-2": "Con una simple petición podrás olvidarte de tener que organizar el viaje por ti mismo y nosotros organizaremos todos los detalles por ti."
+    },
+    "third-section": {
+      "title": "Para todas las personas: toda la tranquilidad, sin quebraderos de cabeza.",
+      "paragraph-1": "Se puede estar en la carretera en cuestión de minutos y disfrutar tanto como se desee. Sea cual sea su viaje, TravelSation le facilitará todo el proceso.",
+      "paragraph-2": "Pueden tener los viajes con el precio que consideren oportuno, TravelSation no establece un precio mínimo.",
+      "button": "Pruébalo ya"
+    }
+  }
 }
