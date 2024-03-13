@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     theme: 'light'
   },
-  modules: ['@nuxtjs/i18n', 'nuxt-svgo'],
+  modules: ['@nuxtjs/i18n', 'nuxt-svgo', '@pinia/nuxt'],
   i18n: {
     langDir: 'i18n/',
     lazy: true,
