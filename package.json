@@ -14,6 +14,9 @@
     "vue": "^3.4.19"
   },
   "devDependencies": {
+    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge",
+    "@pinia/nuxt": "^0.5.1",
+    "nuxt-svgo": "^4.0.0",
     "sass": "^1.71.1"
   }
 }

@@ -1,6 +1,32 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  runtimeConfig: {
+    theme: 'light'
+  },
+  modules: ['@nuxtjs/i18n', 'nuxt-svgo'],
+  i18n: {
+    langDir: 'i18n/',
+    lazy: true,
+    locales: [
+      {
+        code: 'en',
+        iso: 'en',
+        name: 'EN',
+        file: 'en.json',
+      },
+      {
+        code: 'es',
+        iso: 'es',
+        name: 'ES',
+        file: 'es.json',
+      },
+    ],
+    defaultLocale: 'en',
+    detectBrowserLanguage: false,
+    compilation: {
+      strictMessage: false,
+    },
+  },
   app: {
     head: {
       title: 'Hackacode project by Team Omega',
@@ -18,6 +44,10 @@ export default defineNuxtConfig({
       path: '~/components',
       extensions: ['.vue'],
     },
+    {
+      path: '~/components/icons',
+      extensions: ['.vue'],
+    }
   ],
   vite: {
     css: {
