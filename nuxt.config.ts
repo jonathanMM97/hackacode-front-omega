@@ -1,9 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  runtimeConfig: {
-    theme: 'light'
-  },
-  modules: ['@nuxtjs/i18n', 'nuxt-svgo', '@pinia/nuxt'],
+  modules: ['@nuxtjs/i18n', 'nuxt-svgo', '@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt'],
   i18n: {
     langDir: 'i18n/',
     lazy: true,

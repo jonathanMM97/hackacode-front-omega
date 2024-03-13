@@ -1,13 +1,13 @@
 <template>
-  <header class="hk-header" :data-color="theme">
+  <header class="hk-header" :data-color="store.getTheme">
     <div class="hk-layout">
       <NuxtLink :to="(i18n.locale.value === 'es' ? '/' + i18n.locale.value : '/')" v-on:click="selectLanguage('eng')">
-        <Logo class="hk-layout__logo-icon" :data-color="theme" ></Logo>
+        <Logo class="hk-layout__logo-icon" :data-color="store.getTheme" ></Logo>
       </NuxtLink>
 
       <div class="hk-layout__content-text">
-        <NuxtLink class="hk-layout__content-about" :data-color="theme" :to="(i18n.locale.value === 'es' ? '/' + i18n.locale.value : '') + '/about-us'"><p>{{ $t('about-us')}}</p></NuxtLink>
-        <NuxtLink class="hk-layout__content-customer" :data-color="theme" :to="(i18n.locale.value === 'es' ? '/' + i18n.locale.value : '') + '/customers'"><p>{{ $t('customers') }}</p></NuxtLink>
+        <NuxtLink class="hk-layout__content-about" :data-color="store.getTheme" :to="(i18n.locale.value === 'es' ? '/' + i18n.locale.value : '') + '/about-us'"><p>{{ $t('about-us')}}</p></NuxtLink>
+        <NuxtLink class="hk-layout__content-customer" :data-color="store.getTheme" :to="(i18n.locale.value === 'es' ? '/' + i18n.locale.value : '') + '/customers'"><p>{{ $t('customers') }}</p></NuxtLink>
       </div>
 
       <div class="hk-layout__utilities">
@@ -18,14 +18,14 @@
             <p>{{ $t('language') }}</p>
             <Chevron class="hk-layout__chevron" ></Chevron>
           </div>
-          <div v-if="showSelector" class="hk-layout__utilities-language__selector" :data-color="theme" >
+          <div v-if="showSelector" class="hk-layout__utilities-language__selector" :data-color="store.getTheme" >
             <NuxtLink :class="['hk-layout__utilities-language__selector-eng', {'hk-layout__selector-bold': $t('language') === 'Eng'}]" :to="switchLocalePath('en')" v-on:click="selectLanguage('eng')"><p>Eng</p></NuxtLink>
             <NuxtLink :class="['hk-layout__utilities-language__selector-esp', {'hk-layout__selector-bold': $t('language') === 'Esp'}]" :to="switchLocalePath('es')" v-on:click="selectLanguage('esp')" ><p>Esp</p></NuxtLink>
           </div>
         </div>
 
-        <div class="hk-layout__utilities-themes" :data-color="theme" v-on:click="changeTheme(theme === 'light' ? 'dark' : 'light')" >
-          <Sun v-if="theme === 'light' || theme === undefined" class="hk-layout__sun-icon" ></Sun>
+        <div class="hk-layout__utilities-themes" :data-color="store.getTheme" v-on:click="store.setTheme(store.getTheme === 'light' ? 'dark' : 'light')" >
+          <Sun v-if="store.getTheme === 'light'" class="hk-layout__sun-icon" ></Sun>
           <Moon v-else class="hk-layout__moon-icon"></Moon>
         </div>
 
@@ -44,14 +44,9 @@ import Chevron from "@/public/media/chevron.svg";
 import Sun from "@/public/media/sun-svgrepo-com.svg";
 import Moon from "@/public/media/moon.svg"
 import Message from "@/public/media/message-icon.svg";
+import { useHackacodeStore } from "~/stores/Hackacode";
 
-const props = defineProps({
-  theme: {
-    type: String,
-    default: undefined
-  }
-})
-
+const store = useHackacodeStore();
 const i18n = useI18n();
 const currentlanguage = i18n.locale.value;
 const switchLocalePath = useSwitchLocalePath()
@@ -64,10 +59,6 @@ const emit = defineEmits(['input']);
 const selectLanguage = (language) : void => {
   lang.value = language;
   showSelector.value = false;
-}
-
-const changeTheme = (currentTheme) : void => {
-  emit('input', currentTheme);
 }
 </script>
 
