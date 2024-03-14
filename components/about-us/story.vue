@@ -4,7 +4,11 @@
       {{ $t("about.title") }}
     </UnderlineTitle>
     <div class="hk-about__content">
-      <img class="hk-about__content-image" src="@/public/media/cover-page.png" alt="Cover page image" />
+      <img
+        class="hk-about__content-image"
+        src="@/public/media/cover-page.png"
+        alt="Cover page image"
+      />
       <h3>{{ $t("about.content-section.title") }}</h3>
 
       <div class="hk-about__content-story">

@@ -13,9 +13,9 @@ import { useHackacodeStore } from "~/stores/Hackacode";
 defineProps({
   color: {
     type: String,
-    require: true
-  }
-})
+    require: true,
+  },
+});
 
 const store = useHackacodeStore();
 </script>
