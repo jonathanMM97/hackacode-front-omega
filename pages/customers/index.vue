@@ -1,3 +1,5 @@
-<template></template>
+<template>
+  <Commitment />
+</template>
 
 <script setup lang="ts"></script>
