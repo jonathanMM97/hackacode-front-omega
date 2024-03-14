@@ -1,24 +1,29 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/i18n', 'nuxt-svgo', '@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt'],
+  modules: [
+    "@nuxtjs/i18n",
+    "nuxt-svgo",
+    "@pinia/nuxt",
+    "@pinia-plugin-persistedstate/nuxt",
+  ],
   i18n: {
-    langDir: 'i18n/',
+    langDir: "i18n/",
     lazy: true,
     locales: [
       {
-        code: 'en',
-        iso: 'en',
-        name: 'EN',
-        file: 'en.json',
+        code: "en",
+        iso: "en",
+        name: "EN",
+        file: "en.json",
       },
       {
-        code: 'es',
-        iso: 'es',
-        name: 'ES',
-        file: 'es.json',
+        code: "es",
+        iso: "es",
+        name: "ES",
+        file: "es.json",
       },
     ],
-    defaultLocale: 'en',
+    defaultLocale: "en",
     detectBrowserLanguage: false,
     compilation: {
       strictMessage: false,
@@ -26,25 +31,33 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Hackacode project by Team Omega',
+      title: "Hackacode project by Team Omega",
       meta: [
-        { name: 'description', content: 'A iniciative of TODOCODE to promoved the talent of the juniors.' }
+        {
+          name: "description",
+          content:
+            "A iniciative of TODOCODE to promoved the talent of the juniors.",
+        },
       ],
       script: [
-        { src: 'https://cdn.usefathom.com/script.js', 'data-site': 'YIGWQKVM', defer: true }
-      ]
+        {
+          src: "https://cdn.usefathom.com/script.js",
+          "data-site": "YIGWQKVM",
+          defer: true,
+        },
+      ],
     },
-    baseURL: process.env.BASE_URL ?? '/'
+    baseURL: process.env.BASE_URL ?? "/",
   },
   components: [
     {
-      path: '~/components',
-      extensions: ['.vue'],
+      path: "~/components",
+      extensions: [".vue"],
     },
     {
-      path: '~/components/icons',
-      extensions: ['.vue'],
-    }
+      path: "~/components/icons",
+      extensions: [".vue"],
+    },
   ],
   vite: {
     css: {
@@ -53,9 +66,9 @@ export default defineNuxtConfig({
           additionalData: `
                 @import "./assets/styles/_functions.scss";
                 @import "./assets/styles/vars/_vars.scss";
-                `
-        }
-      }
-    }
-  }
-})
+                `,
+        },
+      },
+    },
+  },
+});

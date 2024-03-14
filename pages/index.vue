@@ -1,10 +1,9 @@
 <template>
- <Header class="hk-home__header"/>
- <Main class="hk-home__main"/>
+  <Header class="hk-home__header" />
+  <Main class="hk-home__main" />
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss">
 .hk-home {

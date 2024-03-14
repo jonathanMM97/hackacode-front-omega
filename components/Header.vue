@@ -1,21 +1,38 @@
 <template>
   <header class="hk-header" :data-color="store.getTheme">
     <div class="hk-layout">
-      <NuxtLink :to="(i18n.locale.value === 'es' ? '/' + i18n.locale.value : '/')">
-        <Logo class="hk-layout__logo-icon" :data-color="store.getTheme" ></Logo>
+      <NuxtLink
+        :to="i18n.locale.value === 'es' ? '/' + i18n.locale.value : '/'"
+      >
+        <Logo class="hk-layout__logo-icon" :data-color="store.getTheme"></Logo>
       </NuxtLink>
       <div class="hk-layout__content-text">
-        <NuxtLink class="hk-layout__content-about" :data-color="store.getTheme" :to="(i18n.locale.value === 'es' ? '/' + i18n.locale.value : '') + '/about-us'"><p>{{ $t('about-us')}}</p></NuxtLink>
-        <NuxtLink class="hk-layout__content-customer" :data-color="store.getTheme" :to="(i18n.locale.value === 'es' ? '/' + i18n.locale.value : '') + '/customers'"><p>{{ $t('customers') }}</p></NuxtLink>
+        <NuxtLink
+          class="hk-layout__content-about"
+          :data-color="store.getTheme"
+          :to="
+            (i18n.locale.value === 'es' ? '/' + i18n.locale.value : '') +
+            '/about-us'
+          "
+          ><p>{{ $t("about-us") }}</p></NuxtLink
+        >
+        <NuxtLink
+          class="hk-layout__content-customer"
+          :data-color="store.getTheme"
+          :to="
+            (i18n.locale.value === 'es' ? '/' + i18n.locale.value : '') +
+            '/customers'
+          "
+          ><p>{{ $t("customers") }}</p></NuxtLink
+        >
       </div>
 
-      <Actions/>
+      <Actions />
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
-
 import Logo from "@/public/media/logo.svg";
 import { useHackacodeStore } from "~/stores/Hackacode";
 

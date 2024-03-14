@@ -1,14 +1,22 @@
 <template>
   <main class="hk-main" :data-color="store.getTheme">
     <section class="hk-main__section-head">
-      <h2 :data-color="store.getTheme">{{ $t('main.slogan') }}</h2>
-      <img v-if="store.getTheme === 'light'" class="hk-main__section-img" src="@/public/media/plane-light.png"/>
-      <img v-else class="hk-main__section-img" src="@/public/media/plane-dark.png"/>
+      <h2 :data-color="store.getTheme">{{ $t("main.slogan") }}</h2>
+      <img
+        v-if="store.getTheme === 'light'"
+        class="hk-main__section-img"
+        src="@/public/media/plane-light.png"
+      />
+      <img
+        v-else
+        class="hk-main__section-img"
+        src="@/public/media/plane-dark.png"
+      />
     </section>
     <section class="hk-main__section-footer">
-      <h3>{{ $t('main.third-section.title') }}</h3>
-      <p>{{ $t('main.third-section.paragraph-1') }}</p>
-      <p>{{ $t('main.third-section.paragraph-2') }}</p>
+      <h3>{{ $t("main.third-section.title") }}</h3>
+      <p>{{ $t("main.third-section.paragraph-1") }}</p>
+      <p>{{ $t("main.third-section.paragraph-2") }}</p>
     </section>
   </main>
 </template>
