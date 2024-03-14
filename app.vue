@@ -2,7 +2,6 @@
   <div class="page">
     <Header />
     <NuxtPage />
-    <Footer />
   </div>
 </template>
 
