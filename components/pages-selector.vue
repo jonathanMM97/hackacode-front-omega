@@ -34,9 +34,9 @@ const i18n = useI18n();
     display: flex;
     font-family: $font-main;
     font-size: $font-size--small;
-    width: 200px;
+    width: rem(200px);
     justify-content: space-between;
-    gap: 20px;
+    gap: rem(20px);
   }
 
   &__content-about,

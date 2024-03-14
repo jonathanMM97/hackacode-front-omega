@@ -40,9 +40,9 @@ const store = useHackacodeStore();
   &__rectangle {
     width: 100%;
     overflow: hidden;
-    height: 20px;
-    border-radius: 20px;
-    margin-top: -30px;
+    height: rem(20px);
+    border-radius: rem(20px);
+    margin-top: rem(-30px);
 
     &[data-color="blue"] {
       background-color: rgba($font-color--blue, 0.5);

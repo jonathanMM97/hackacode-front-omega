@@ -66,11 +66,11 @@ import Linkedin from "@/public/media/linkedin.svg";
     display: flex;
     flex-direction: row;
     margin-top: 20px;
-    gap: 40px;
+    gap: rem(40px);
   }
 
   &__profiles-img {
-    width: 50px;
+    width: rem(50px);
   }
 
   &__links {
@@ -78,17 +78,17 @@ import Linkedin from "@/public/media/linkedin.svg";
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: rem(10px);
     margin-bottom: 3rem;
-    gap: 10px;
+    gap: rem(10px);
   }
 
   &__links-icon {
-    width: 80px;
+    width: rem(80px);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: rem(10px);
   }
 }
 </style>

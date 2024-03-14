@@ -42,12 +42,12 @@ const i18n = useI18n();
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: rem(20px);
 }
 
 .hk-actions {
-  width: 400px;
-  gap: 20px;
+  width: rem(400px);
+  gap: rem(20px);
 
   &__login {
     text-decoration: none;
@@ -64,15 +64,15 @@ const i18n = useI18n();
 .hk-actions-language {
   display: flex;
   flex-direction: column;
-  width: 70px;
+  width: rem(70px);
   align-items: center;
 }
 
 .hk-actions-themes {
   overflow: hidden;
-  width: 60px;
-  height: 30px;
-  border-radius: 20px;
+  width: rem(60px);
+  height: rem(30px);
+  border-radius: rem(20px);
   cursor: pointer;
 
   &[data-color="light"] {
@@ -84,23 +84,23 @@ const i18n = useI18n();
 }
 
 .hk-sun-icon {
-  width: 50px;
-  height: 50px;
+  width: rem(50px);
+  height: rem(50px);
   scale: 0.9;
-  transform: translateX(-25px) translateY(4px);
+  transform: translateX(rem(-25px)) translateY(rem(4px));
 }
 
 .hk-moon-icon {
-  width: 50px;
-  height: 50px;
+  width: rem(50px);
+  height: rem(50px);
   scale: 0.7;
-  transform: scaleX(-1) translateX(-30px) translateY(-10px);
+  transform: scaleX(-1) translateX(rem(-30px)) translateY(rem(-10px));
 }
 
 .hk-message-icon {
-  width: 30px;
-  height: 30px;
-  padding-right: 20px;
+  width: rem(30px);
+  height: rem(30px);
+  padding-right: rem(20px);
   scale: 1;
 }
 </style>
