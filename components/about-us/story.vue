@@ -3,7 +3,7 @@
     <UnderlineTitle class="hk-about__title" :color="'blue'">
       {{ $t("about.title") }}
     </UnderlineTitle>
-    <div class="hk-about__content">
+    <div class="hk-about__content" :data-color="store.getTheme">
       <img
         class="hk-about__content-image"
         src="@/public/media/cover-page.png"
@@ -11,7 +11,7 @@
       />
       <h3>{{ $t("about.content-section.title") }}</h3>
 
-      <div class="hk-about__content-story">
+      <div class="hk-about__content-story" :data-color="store.getTheme">
         <p>{{ $t("about.content-section.paragraph-1") }}</p>
         <p>{{ $t("about.content-section.paragraph-2") }}</p>
         <p>{{ $t("about.content-section.paragraph-3") }}</p>
@@ -50,6 +50,13 @@ const store = useHackacodeStore();
     justify-content: center;
     align-items: center;
 
+    &[data-color="light"] {
+      color: $font-color--dark;
+    }
+    &[data-color="dark"] {
+      color: $font-color--light;
+    }
+
     h3 {
       font-size: $font-size--big;
     }
@@ -59,6 +66,13 @@ const store = useHackacodeStore();
     padding-left: 10rem;
     padding-right: 10rem;
     padding-bottom: 10rem;
+
+    &[data-color="light"] {
+      color: $font-color--dark;
+    }
+    &[data-color="dark"] {
+      color: $font-color--light;
+    }
 
     p {
       font-size: $font-size--medium;
