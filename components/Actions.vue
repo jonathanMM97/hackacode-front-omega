@@ -15,23 +15,25 @@
 
     <NuxtLink
       class="hk-actions__login"
-      :to="(i18n.locale.value === 'es' ? '/' + i18n.locale.value : '') + '/login'"
+      :to="
+        (i18n.locale.value === 'es' ? '/' + i18n.locale.value : '') + '/login'
+      "
       :data-color="store.getTheme"
-      ><p>{{ $t('log-in') }}</p></NuxtLink
+      ><p>{{ $t("log-in") }}</p></NuxtLink
     >
     <Message class="hk-message-icon"></Message>
   </div>
 </template>
 
 <script setup lang="ts">
-import Sun from '@/public/media/sun-svgrepo-com.svg'
-import Moon from '@/public/media/moon.svg'
-import Message from '@/public/media/message-icon.svg'
+import Sun from "@/public/media/sun-svgrepo-com.svg";
+import Moon from "@/public/media/moon.svg";
+import Message from "@/public/media/message-icon.svg";
 
-import { useHackacodeStore } from '~/stores/Hackacode'
+import { useHackacodeStore } from "~/stores/Hackacode";
 
-const store = useHackacodeStore()
-const i18n = useI18n()
+const store = useHackacodeStore();
+const i18n = useI18n();
 </script>
 
 <style lang="scss">
@@ -50,10 +52,10 @@ const i18n = useI18n()
   &__login {
     text-decoration: none;
     font-weight: $font-weight--bold;
-    &[data-color='light'] {
+    &[data-color="light"] {
       color: $font-color--dark;
     }
-    &[data-color='dark'] {
+    &[data-color="dark"] {
       color: $font-color--light;
     }
   }
@@ -73,10 +75,10 @@ const i18n = useI18n()
   border-radius: 20px;
   cursor: pointer;
 
-  &[data-color='light'] {
+  &[data-color="light"] {
     background-color: $font-color--light-theme;
   }
-  &[data-color='dark'] {
+  &[data-color="dark"] {
     background-color: $font-color--dark-theme;
   }
 }

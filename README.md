@@ -11,6 +11,7 @@ To get started on how to set up the project, meet our technical guidelines or le
 For other useful information about **Omega team** you can consult [our Confluence space](https://jonathanmunnozmorales.atlassian.net/wiki/spaces/~71202092c91749501e4b85bff1eaa0e3faf445/pages/33315/Proyecto+Hackacode+by+TodoCode)
 
 ## Team **Omega**
+
 ### Front-end
 
 <a href="https://github.com/jonathanMM97">
@@ -18,6 +19,7 @@ For other useful information about **Omega team** you can consult [our Confluenc
 </a>
 
 ### Back-end
+
 <a href="https://github.com/SebastianFurnier">
 <img src=https://avatars.githubusercontent.com/u/98433880?v=4 height="40px" alt="Roost.AI" style="border-radius: 50%; margin-right: 10px" />
 </a>
