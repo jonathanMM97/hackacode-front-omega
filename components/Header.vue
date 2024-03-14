@@ -4,7 +4,6 @@
       <NuxtLink :to="(i18n.locale.value === 'es' ? '/' + i18n.locale.value : '/')">
         <Logo class="hk-layout__logo-icon" :data-color="store.getTheme" ></Logo>
       </NuxtLink>
-
       <div class="hk-layout__content-text">
         <NuxtLink class="hk-layout__content-about" :data-color="store.getTheme" :to="(i18n.locale.value === 'es' ? '/' + i18n.locale.value : '') + '/about-us'"><p>{{ $t('about-us')}}</p></NuxtLink>
         <NuxtLink class="hk-layout__content-customer" :data-color="store.getTheme" :to="(i18n.locale.value === 'es' ? '/' + i18n.locale.value : '') + '/customers'"><p>{{ $t('customers') }}</p></NuxtLink>
@@ -34,10 +33,12 @@ const i18n = useI18n();
   &[data-color="light"] {
     color: $font-color--dark;
     background-color: $font-color--light;
+    box-shadow: 2px 2px 2px rgba($font-color--dark, 0.1);
   }
   &[data-color="dark"] {
     color: $font-color--light;
     background-color: $font-color--dark;
+    box-shadow: 2px 2px 2px rgba($font-color--light, 0.1);
   }
 }
 

@@ -69,6 +69,7 @@ const store = useHackacodeStore();
     p {
       width: 53%;
       font-size: $font-size--medium;
+      margin-top: 0;
     }
   }
 
