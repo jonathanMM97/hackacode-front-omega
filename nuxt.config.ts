@@ -55,7 +55,7 @@ export default defineNuxtConfig({
       extensions: [".vue"],
     },
     {
-      path: "~/components/icons",
+      path: "~/components/about-us",
       extensions: [".vue"],
     },
   ],

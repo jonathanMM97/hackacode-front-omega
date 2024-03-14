@@ -32,12 +32,12 @@ const i18n = useI18n();
   &[data-color="light"] {
     color: $font-color--dark;
     background-color: $font-color--light;
-    box-shadow: 2px 2px 2px rgba($font-color--dark, 0.1);
+    box-shadow: rem(2px) rem(2px) rem(2px) rgba($font-color--dark, 0.1);
   }
   &[data-color="dark"] {
     color: $font-color--light;
     background-color: $font-color--dark;
-    box-shadow: 2px 2px 2px rgba($font-color--light, 0.1);
+    box-shadow: rem(2px) rem(2px) rem(2px) rgba($font-color--light, 0.1);
   }
 }
 
@@ -46,11 +46,11 @@ const i18n = useI18n();
   font-family: $font-main;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: rem(20px);
 
   &__logo-icon {
-    width: 150px;
-    height: 100px;
+    width: rem(150px);
+    height: rem(100px);
     scale: 1.3;
     &[data-color="light"] {
       color: $font-color--dark;

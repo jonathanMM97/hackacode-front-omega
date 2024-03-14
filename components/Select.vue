@@ -58,11 +58,11 @@ const changeLanguage = (): void => {
     align-items: center;
     position: absolute;
     justify-content: center;
-    top: 75px;
-    width: 70px;
-    height: 90px;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px rgba($font-color--dark, 0.2);
+    top: rem(75px);
+    width: rem(70px);
+    height: rem(90px);
+    border-radius: rem(20px);
+    box-shadow: rem(5px) rem(5px) rem(5px) rgba($font-color--dark, 0.2);
     &[data-color="light"] {
       background-color: $font-color--light;
       p {
@@ -86,11 +86,11 @@ const changeLanguage = (): void => {
 
   &__container {
     display: flex;
-    width: 70px;
+    width: rem(70px);
     font-weight: $font-weight--bold;
     cursor: pointer;
     justify-content: space-between;
-    gap: 10px;
+    gap: rem(10px);
   }
 }
 
@@ -99,14 +99,14 @@ const changeLanguage = (): void => {
 }
 
 .hk-language-icon {
-  width: 50px;
-  height: 50px;
+  width: rem(50px);
+  height: rem(50px);
   scale: 1.2;
 }
 
 .hk-chevron-icon {
-  width: 50px;
-  height: 50px;
+  width: rem(50px);
+  height: rem(50px);
   scale: 1;
 }
 </style>

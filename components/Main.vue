@@ -41,9 +41,9 @@ const store = useHackacodeStore();
   h2 {
     position: absolute;
     font-size: $font-size--large;
-    width: 400px;
-    margin-right: 350px;
-    margin-bottom: 60px;
+    width: rem(400px);
+    margin-right: rem(350px);
+    margin-bottom: rem(60px);
 
     &[data-color="light"] {
       color: $font-color--dark;
@@ -52,8 +52,8 @@ const store = useHackacodeStore();
       color: $font-color--light;
       width: 30%;
       margin-right: 0;
-      margin-left: 20px;
-      margin-bottom: -200px;
+      margin-left: rem(20px);
+      margin-bottom: rem(-200px);
     }
   }
 
