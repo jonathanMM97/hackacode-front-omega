@@ -1,6 +1,7 @@
 <template>
   <footer class="hk-footer">
     <Logo class="hk-footer__logo" />
+    <PagesSelector class="hk-footer__pages" />
   </footer>
 </template>
 
@@ -21,6 +22,10 @@ import Logo from "@/public/media/logo-footer.svg";
       width: rem(340px);
       height: rem(170px);
       transform: translateY(rem(-40px));
+    }
+
+    &__pages {
+      margin-top: -2rem;
     }
   }
 </style>
