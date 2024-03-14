@@ -6,26 +6,7 @@
       >
         <Logo class="hk-layout__logo-icon" :data-color="store.getTheme"></Logo>
       </NuxtLink>
-      <div class="hk-layout__content-text">
-        <NuxtLink
-          class="hk-layout__content-about"
-          :data-color="store.getTheme"
-          :to="
-            (i18n.locale.value === 'es' ? '/' + i18n.locale.value : '') +
-            '/about-us'
-          "
-          ><p>{{ $t("about-us") }}</p></NuxtLink
-        >
-        <NuxtLink
-          class="hk-layout__content-customer"
-          :data-color="store.getTheme"
-          :to="
-            (i18n.locale.value === 'es' ? '/' + i18n.locale.value : '') +
-            '/customers'
-          "
-          ><p>{{ $t("customers") }}</p></NuxtLink
-        >
-      </div>
+      <PagesSelector />
 
       <Actions />
     </div>
@@ -71,26 +52,6 @@ const i18n = useI18n();
     width: 150px;
     height: 100px;
     scale: 1.3;
-    &[data-color="light"] {
-      color: $font-color--dark;
-    }
-    &[data-color="dark"] {
-      color: $font-color--light;
-    }
-  }
-
-  &__content-text {
-    display: flex;
-    font-family: $font-main;
-    font-size: $font-size--small;
-    width: 200px;
-    justify-content: space-between;
-    gap: 20px;
-  }
-
-  &__content-about,
-  &__content-customer {
-    text-decoration: none;
     &[data-color="light"] {
       color: $font-color--dark;
     }
