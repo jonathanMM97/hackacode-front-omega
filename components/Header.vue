@@ -43,6 +43,7 @@ const i18n = useI18n();
 <style lang="scss">
 .hk-header {
   position: sticky;
+  z-index: 1;
   top: 0;
   padding-right: rem(20px);
   padding-left: rem(40px);
