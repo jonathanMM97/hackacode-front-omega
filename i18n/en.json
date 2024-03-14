@@ -16,5 +16,15 @@
       "paragraph-2": "Can have trip priced as they see fit, TravelSation does not set a minimum price.",
       "button": "Try it now"
     }
+  },
+  "about": {
+    "title": "About TravelSation",
+    "content-section": {
+      "title": "We powered the travel",
+      "paragraph-1": "We do this with unique pricing and offerings that are always looking out for each of our customers.",
+      "paragraph-2": "We provide the best offer in the industry thanks to the perfect combination of advanced technology and personalized attention. In our commitment to empowering travel, we strive to create unforgettable experiences for every traveler, from the most intrepid adventurers to those seeking a tranquil retreat.",
+      "paragraph-3": "Our passion for travel drives every aspect of our service, from selecting exciting destinations to finding the best rates and accommodation options.",
+      "paragraph-4": "Every step of the way, we are dedicated to exceeding our clients' expectations and making each trip a unique and unforgettable experience."
+    }
   }
 }

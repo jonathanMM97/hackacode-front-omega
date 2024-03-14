@@ -16,5 +16,15 @@
       "paragraph-2": "Pueden tener los viajes con el precio que consideren oportuno, TravelSation no establece un precio mínimo.",
       "button": "Pruébalo ya"
     }
+  },
+  "about": {
+    "title": "Sobre TravelSation",
+    "content-section": {
+      "title": "Aligeramos los viajes",
+      "paragraph-1": "Ofrecemos precios únicos y con unas ofertas siempre mirando por cada uno de nuestros clientes.",
+      "paragraph-2": "Proporcionamos la mejor oferta del sector gracias a la combinación perfecta de tecnología avanzada y atención personalizada. En nuestro compromiso por potenciar los viajes, nos esforzamos por crear experiencias inolvidables para cada viajero, desde los aventureros más intrépidos hasta aquellos que buscan un retiro tranquilo.",
+      "paragraph-3": "Nuestra pasión por los viajes impulsa cada aspecto de nuestro servicio, desde la selección de destinos emocionantes hasta la búsqueda de las mejores tarifas y opciones de alojamiento.",
+      "paragraph-4": "En cada paso del camino, estamos dedicados a superar las expectativas de nuestros clientes y convertir cada viaje en una experiencia única e inolvidable."
+    }
   }
 }
