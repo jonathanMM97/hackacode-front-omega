@@ -30,6 +30,7 @@ const i18n = useI18n();
 
 <style lang="scss">
 .hk-selector {
+  font-family: $font-main;
   &__content-text {
     display: flex;
     font-family: $font-main;

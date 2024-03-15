@@ -23,6 +23,7 @@ const store = useHackacodeStore();
 <style lang="scss">
 .hk-underline {
   display: block;
+  font-family: $font-main;
   width: fit-content;
   height: fit-content;
 
@@ -46,6 +47,9 @@ const store = useHackacodeStore();
 
     &[data-color="blue"] {
       background-color: rgba($font-color--blue, 0.5);
+    }
+    &[data-color="yellow"] {
+      background-color: rgba($font-color--yellow, 0.5);
     }
   }
 }

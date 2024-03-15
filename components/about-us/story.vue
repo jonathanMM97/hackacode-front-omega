@@ -31,6 +31,7 @@ const store = useHackacodeStore();
 .hk-about {
   display: flex;
   flex-direction: column;
+  font-family: $font-main;
   height: fit-content;
   padding-left: 10rem;
   padding-right: 10rem;

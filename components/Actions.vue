@@ -47,6 +47,7 @@ const i18n = useI18n();
 
 .hk-actions {
   width: rem(400px);
+  font-family: $font-main;
   gap: rem(20px);
 
   &__login {

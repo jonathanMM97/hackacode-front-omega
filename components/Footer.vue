@@ -1,5 +1,5 @@
 <template>
-  <footer class="hk-footer">
+  <footer class="hk-footer" :data-color="store.getTheme">
     <Logo class="hk-footer__logo" />
     <PagesSelector class="hk-footer__pages" />
     <div class="hk-footer__profiles">
@@ -41,16 +41,27 @@
 import Logo from "@/public/media/logo-footer.svg";
 import Twitter from "@/public/media/twitter.svg";
 import Linkedin from "@/public/media/linkedin.svg";
+import { useHackacodeStore } from "~/stores/Hackacode";
+
+const store = useHackacodeStore();
 </script>
 
 <style lang="scss">
 .hk-footer {
   height: fit-content;
+  font-family: $font-main;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: $font-color--light-green;
+
+  &[data-color="light"] {
+    color: $font-color--dark;
+  }
+  &[data-color="dark"] {
+    color: $font-color--light;
+  }
 
   &__logo {
     width: rem(340px);

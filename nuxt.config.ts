@@ -58,6 +58,10 @@ export default defineNuxtConfig({
       path: "~/components/about-us",
       extensions: [".vue"],
     },
+    {
+      path: "~/components/customers",
+      extensions: [".vue"],
+    },
   ],
   vite: {
     css: {

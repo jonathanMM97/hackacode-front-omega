@@ -51,6 +51,7 @@ const changeLanguage = (): void => {
 
 <style lang="scss">
 .hk-select-language {
+  font-family: $font-main;
   &__selector {
     display: flex;
     flex-direction: column;
