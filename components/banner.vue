@@ -43,10 +43,10 @@ const store = useHackacodeStore();
     position: absolute;
     right: 20rem;
     scale: -1;
-    transform: translateY(-1px) translateX(-155px);
-    height: 170px;
-    width: 320px;
-    border-radius: 150px 150px 0 0;
+    transform: translateY(rem(-1px)) translateX(rem(-155px));
+    height: rem(170px);
+    width: rem(320px);
+    border-radius: rem(150px) rem(150px) 0 0;
 
     &[data-color="light"] {
       background-color: $font-color--banner-light-1;
@@ -60,9 +60,9 @@ const store = useHackacodeStore();
     position: absolute;
     right: 0;
     transform: translateY(31px);
-    height: 170px;
-    width: 320px;
-    border-radius: 150px 150px 0 0;
+    height: rem(170px);
+    width: rem(320px);
+    border-radius: rem(150px) rem(150px) 0 0;
     z-index: 1;
 
     &[data-color="light"] {
@@ -75,7 +75,7 @@ const store = useHackacodeStore();
 
   &__button {
     position: absolute;
-    transform: translateX(500px) translateY(97px);
+    transform: translateX(rem(500px)) translateY(rem(97px));
     z-index: 2;
   }
 }

@@ -49,7 +49,7 @@ const store = useHackacodeStore();
 
     h2 {
       font-size: $font-size--large;
-      padding-right: 15px;
+      padding-right: rem(15px);
     }
   }
 
