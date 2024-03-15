@@ -1,13 +1,13 @@
 <template>
   <main class="hk-form-contact" :data-color="store.getTheme">
     <div class="hk-form-contact__title">
-      <h2>{{ $t('contact-us.title-1') }}</h2>
+      <h2>{{ $t("contact-us.title-1") }}</h2>
       <UnderlineTitle :color="'pink'">
-        {{ $t('contact-us.title-2') }}
+        {{ $t("contact-us.title-2") }}
       </UnderlineTitle>
     </div>
     <UnderlineTitle class="hk-form-contact__end-question" :color="'pink'">
-      {{ $t('contact-us.title-3') }}
+      {{ $t("contact-us.title-3") }}
     </UnderlineTitle>
   </main>
 </template>
