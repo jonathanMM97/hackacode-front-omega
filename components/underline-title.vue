@@ -51,6 +51,9 @@ const store = useHackacodeStore();
     &[data-color="yellow"] {
       background-color: rgba($font-color--yellow, 0.5);
     }
+    &[data-color="pink"] {
+      background-color: rgba($font-color--pink, 0.8);
+    }
   }
 }
 </style>

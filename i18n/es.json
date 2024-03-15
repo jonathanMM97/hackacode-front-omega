@@ -37,5 +37,14 @@
     "community": "Comunidad de socios para colaborar y compartir",
     "dollar": "Colaboración continua y mejores ofertas de viajes",
     "banner": "Consigue el viaje soñado sin quebraderos de cabeza"
+  },
+  "contact-us": {
+    "title-1": "Quieres",
+    "title-2": "saber",
+    "title-3": "más?",
+    "form-1": "Nombre",
+    "form-2": "Email",
+    "form-3": "Comentario o mensaje",
+    "button": "Enviar"
   }
 }

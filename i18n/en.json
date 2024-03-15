@@ -37,5 +37,14 @@
     "community": "Partner community to collaborate and share",
     "dollar": "Continuous collaboration and better travel deals",
     "banner": "Get the dream trip without headaches"
+  },
+  "contact-us": {
+    "title-1": "Wanna",
+    "title-2": "know",
+    "title-3": "more?",
+    "form-1": "Name",
+    "form-2": "Email",
+    "form-3": "Comment or message",
+    "button": "Send"
   }
 }
