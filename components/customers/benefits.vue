@@ -3,15 +3,15 @@
     <div class="hk-benefits__content">
       <div class="hk-benefits__images">
         <img src="@/public/media/headsets.png" alt="Headsets image" />
-        <p>{{ $t('text-customers.services') }}</p>
+        <p>{{ $t("text-customers.services") }}</p>
       </div>
       <div class="hk-benefits__images">
         <img src="@/public/media/community.png" alt="Headsets image" />
-        <p>{{ $t('text-customers.community') }}</p>
+        <p>{{ $t("text-customers.community") }}</p>
       </div>
       <div class="hk-benefits__images">
         <img src="@/public/media/dollar.png" alt="Headsets image" />
-        <p>{{ $t('text-customers.dollar') }}</p>
+        <p>{{ $t("text-customers.dollar") }}</p>
       </div>
     </div>
   </div>
@@ -33,7 +33,7 @@
     flex-direction: row;
     gap: 10rem;
   }
-  
+
   &__images {
     width: 15rem;
     display: flex;

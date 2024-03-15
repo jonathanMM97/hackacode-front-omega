@@ -23,7 +23,7 @@ const store = useHackacodeStore();
   display: flex;
   flex-direction: row;
   padding-left: 20rem;
-  
+
   &[data-color="light"] {
     background-color: $font-color--dark-green;
     color: $font-color--light;

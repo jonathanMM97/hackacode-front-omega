@@ -1,18 +1,18 @@
 <template>
   <main class="hk-customers" :data-color="store.getTheme">
     <div class="hk-customers__programme-section">
-      <h2>{{ $t('text-customers.title-1') }}</h2>
+      <h2>{{ $t("text-customers.title-1") }}</h2>
       <UnderlineTitle :color="'yellow'">
-        {{ $t('text-customers.title-2') }}
+        {{ $t("text-customers.title-2") }}
       </UnderlineTitle>
     </div>
-    <p>{{ $t('text-customers.paragraph-1') }}</p>
+    <p>{{ $t("text-customers.paragraph-1") }}</p>
     <div class="hk-customers__benefits-section">
       <UnderlineTitle :color="'yellow'">
-        {{ $t('text-customers.title-3') }}
+        {{ $t("text-customers.title-3") }}
       </UnderlineTitle>
     </div>
-    <p>{{ $t('text-customers.paragraph-2') }}</p>
+    <p>{{ $t("text-customers.paragraph-2") }}</p>
     <Benefits class="hk-custommers__benefits-included" />
   </main>
 </template>
@@ -40,7 +40,6 @@ const store = useHackacodeStore();
     background-color: $font-color--dark;
     color: $font-color--light;
   }
-
 
   &__programme-section {
     display: flex;
