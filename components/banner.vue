@@ -20,6 +20,7 @@ const store = useHackacodeStore();
 <style lang="scss" scoped>
 .hk-banner {
   height: rem(200px);
+  font-family: $font-main;
   display: flex;
   flex-direction: row;
   padding-left: 20rem;

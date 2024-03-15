@@ -46,6 +46,7 @@ import Linkedin from "@/public/media/linkedin.svg";
 <style lang="scss">
 .hk-footer {
   height: fit-content;
+  font-family: $font-main;
   display: flex;
   flex-direction: column;
   justify-content: center;

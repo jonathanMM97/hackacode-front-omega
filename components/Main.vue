@@ -29,6 +29,7 @@ const store = useHackacodeStore();
 
 <style lang="scss">
 .hk-main {
+  font-family: $font-main;
   &[data-color="light"] {
     background-color: $font-color--light;
     color: $font-color--dark;
