@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     "nuxt-svgo",
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
+    '@nuxt/ui'
   ],
   i18n: {
     langDir: "i18n/",

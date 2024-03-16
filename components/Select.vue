@@ -91,6 +91,7 @@ const changeLanguage = (): void => {
     font-weight: $font-weight--bold;
     cursor: pointer;
     justify-content: space-between;
+    align-items: center;
     gap: rem(10px);
   }
 }
