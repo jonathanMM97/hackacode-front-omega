@@ -21,6 +21,7 @@ const store = useHackacodeStore();
 <style lang="scss">
 .hk-form-contact {
   display: flex;
+  font-family: $font-main;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -36,6 +37,7 @@ const store = useHackacodeStore();
 
   h2 {
     font-size: $font-size--large;
+    font-weight: $font-weight--bold;
     padding-right: rem(10px);
   }
 
@@ -45,7 +47,7 @@ const store = useHackacodeStore();
   }
 
   &__end-question {
-    margin-top: rem(-90px);
+    margin-top: rem(-20px);
   }
 }
 </style>

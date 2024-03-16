@@ -109,6 +109,7 @@ const changeLanguage = (): void => {
 .hk-chevron-icon {
   width: rem(50px);
   height: rem(50px);
+  margin-bottom: rem(-2px);
   scale: 1;
 }
 </style>

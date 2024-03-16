@@ -35,6 +35,7 @@ const store = useHackacodeStore();
   height: fit-content;
   padding-left: 10rem;
   padding-right: 10rem;
+  gap: 4rem;
 
   &[data-color="light"] {
     background-color: $font-color--light;
@@ -43,6 +44,11 @@ const store = useHackacodeStore();
   &[data-color="dark"] {
     background-color: $font-color--dark;
     color: font-color--light;
+  }
+
+  &__title {
+    margin-top: rem(30px);
+    padding-left: 10rem;
   }
 
   &__content {
@@ -60,6 +66,8 @@ const store = useHackacodeStore();
 
     h3 {
       font-size: $font-size--big;
+      font-weight: $font-weight--bold;
+      padding-top: 2rem;
     }
   }
 
@@ -77,12 +85,12 @@ const store = useHackacodeStore();
 
     p {
       font-size: $font-size--medium;
-      margin-top: 0;
+      margin-top: rem(20px);
     }
   }
 
   &__content-image {
-    width: 80rem;
+    width: 70rem;
     height: 30rem;
   }
 }

@@ -115,7 +115,8 @@ const i18n = useI18n();
   width: rem(30px);
   height: rem(30px);
   padding-right: rem(20px);
-  scale: 1;
+  margin-bottom: rem(-2px);
+  scale: 1.9;
 
   &[data-color="light"] {
     color: $font-color--dark;

@@ -31,6 +31,7 @@ const store = useHackacodeStore();
   height: fit-content;
   padding-left: 10rem;
   padding-right: 30rem;
+  gap: 2rem;
 
   &[data-color="light"] {
     background-color: $font-color--light;
@@ -54,6 +55,10 @@ const store = useHackacodeStore();
 
   p {
     font-size: $font-size--medium;
+  }
+
+  &__benefits-section {
+    margin-top: 2rem;
   }
 }
 </style>

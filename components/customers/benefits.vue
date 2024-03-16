@@ -25,7 +25,7 @@
   margin-bottom: 6rem;
   padding-left: 10rem;
   padding-right: 10rem;
-  gap: 0;
+  padding-bottom: 4rem;
 
   &__content {
     width: fit-content;

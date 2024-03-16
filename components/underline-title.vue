@@ -29,6 +29,7 @@ const store = useHackacodeStore();
 
   h2 {
     font-size: $font-size--large;
+    font-weight: $font-weight--bold;
 
     &[data-color="light"] {
       color: $font-color--dark;
