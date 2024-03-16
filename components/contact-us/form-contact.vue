@@ -9,6 +9,7 @@
     <UnderlineTitle class="hk-form-contact__end-question" :color="'pink'">
       {{ $t("contact-us.title-3") }}
     </UnderlineTitle>
+    <Form />
   </main>
 </template>
 
