@@ -48,7 +48,7 @@ const store = useHackacodeStore();
   }
 
   &__end-question {
-    margin-top: rem(-20px);
+    margin-top: rem(-90px);
   }
 }
 </style>

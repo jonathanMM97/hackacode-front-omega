@@ -35,10 +35,9 @@ const store = useHackacodeStore();
   }
 
   p {
-    width: 40%;
+    width: 45%;
     font-size: rem(48px);
     font-weight: $font-weight--bold;
-    margin-top: rem(20px);
   }
 
   &__semi-circle-1 {

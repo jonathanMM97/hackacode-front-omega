@@ -83,7 +83,6 @@ const store = useHackacodeStore();
       width: 53%;
       font-size: $font-size--medium;
       margin-top: 0;
-      margin-top: rem(20px);
     }
   }
 
