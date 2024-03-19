@@ -50,5 +50,13 @@
     "form-3": "Comentario o mensaje",
     "placeholder-3": "Tu mensaje aquí",
     "button": "Enviar"
+  },
+  "register": {
+    "title": "Inicia sesión en tu cuenta de TravelSation",
+    "form-1": "Email",
+    "placeholder-1": "Tu email aquí",
+    "form-2": "Password",
+    "placeholder-2": "Tu contraseña aquí",
+    "button": "Enviar"
   }
 }
