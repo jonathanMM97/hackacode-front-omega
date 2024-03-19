@@ -1,6 +1,6 @@
 <template>
   <main class="hk-register" :data-color="store.getTheme">
-    <div>
+    <div class="hk-register__form">
       <h2>{{ $t('register.title') }}</h2>
       <LogIn class="hk-register__fields" />
     </div>
@@ -20,7 +20,8 @@ const store = useHackacodeStore();
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 17rem;
+  padding-left: 20rem;
+  padding-bottom: 10rem;
   overflow: hidden;
 
   &[data-color="light"] {
@@ -36,9 +37,13 @@ const store = useHackacodeStore();
     font-size: $font-size--large;
   }
 
+  &__form {
+    width: 70%;
+  }
+
   &__img {
-    position: absolute;
-    transform: translateX(37rem) translateY(5.5rem);
+    width: 100%;
+    transform: translateX(rem(90px));
   }
 }
 </style>
