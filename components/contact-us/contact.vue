@@ -1,15 +1,16 @@
 <template>
-  <main class="hk-form-contact" :data-color="store.getTheme">
-    <div class="hk-form-contact__title">
+  <main class="hk-contact" :data-color="store.getTheme">
+    <div class="hk-contact__title">
       <h2>{{ $t("contact-us.title-1") }}</h2>
       <UnderlineTitle :color="'pink'">
         {{ $t("contact-us.title-2") }}
       </UnderlineTitle>
     </div>
-    <UnderlineTitle class="hk-form-contact__end-question" :color="'pink'">
+    <UnderlineTitle class="hk-contact__end-question" :color="'pink'">
       {{ $t("contact-us.title-3") }}
     </UnderlineTitle>
-    <Form />
+    <p>{{ $t("contact-us.description") }}</p>
+    <ContactForm />
   </main>
 </template>
 
@@ -20,12 +21,14 @@ const store = useHackacodeStore();
 </script>
 
 <style lang="scss">
-.hk-form-contact {
+.hk-contact {
   display: flex;
   font-family: $font-main;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-left: 30rem;
+  padding-right: 30rem;
 
   &[data-color="light"] {
     background-color: $font-color--light;
@@ -40,6 +43,10 @@ const store = useHackacodeStore();
     font-size: $font-size--large;
     font-weight: $font-weight--bold;
     padding-right: rem(10px);
+  }
+
+  p {
+    font-size: $font-size--medium;
   }
 
   &__title {

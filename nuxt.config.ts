@@ -66,6 +66,10 @@ export default defineNuxtConfig({
       path: "~/components/contact-us",
       extensions: [".vue"],
     },
+    {
+      path: "~/components/forms",
+      extensions: [".vue"],
+    },
   ],
   vite: {
     css: {
