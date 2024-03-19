@@ -70,6 +70,10 @@ export default defineNuxtConfig({
       path: "~/components/forms",
       extensions: [".vue"],
     },
+    {
+      path: "~/components/log-in",
+      extensions: [".vue"],
+    },
   ],
   vite: {
     css: {

@@ -50,5 +50,13 @@
     "form-3": "Comment or message",
     "placeholder-3": "Your message here",
     "button": "Send"
+  },
+  "register": {
+    "title": "Login to your TravelSation account",
+    "form-1": "Email",
+    "placeholder-1": "Your email here",
+    "form-2": "Password",
+    "placeholder-2": "Your password here",
+    "button": "Send"
   }
 }
