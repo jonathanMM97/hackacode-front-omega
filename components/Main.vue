@@ -42,6 +42,7 @@ const store = useHackacodeStore();
   h2 {
     position: absolute;
     font-size: $font-size--large;
+    font-weight: $font-weight--bold;
     width: rem(400px);
     margin-right: rem(350px);
     margin-bottom: rem(60px);
@@ -51,10 +52,10 @@ const store = useHackacodeStore();
     }
     &[data-color="dark"] {
       color: $font-color--light;
-      width: 30%;
+      width: 35%;
       margin-right: 0;
       margin-left: rem(20px);
-      margin-bottom: rem(-200px);
+      margin-bottom: rem(-260px);
     }
   }
 
@@ -70,9 +71,12 @@ const store = useHackacodeStore();
     font-size: $font-size--big;
     justify-content: center;
     align-items: center;
+    margin-bottom: 6rem;
 
     h3 {
       width: 53%;
+      font-weight: $font-weight--bold;
+      margin-top: rem(20px);
     }
 
     p {

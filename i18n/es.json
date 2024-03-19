@@ -37,5 +37,18 @@
     "community": "Comunidad de socios para colaborar y compartir",
     "dollar": "Colaboración continua y mejores ofertas de viajes",
     "banner": "Consigue el viaje soñado sin quebraderos de cabeza"
+  },
+  "contact-us": {
+    "title-1": "Quieres",
+    "title-2": "saber",
+    "title-3": "más?",
+    "description": "¡Hablemos hoy mismo de todas las ventajas que le ofrecemos sólo por estar con nosotros!",
+    "form-1": "Nombre",
+    "placeholder-1": "José Antonio",
+    "form-2": "Email",
+    "placeholder-2": "ejemplo{'@'}ejemplo.com",
+    "form-3": "Comentario o mensaje",
+    "placeholder-3": "Tu mensaje aquí",
+    "button": "Enviar"
   }
 }

@@ -21,7 +21,17 @@
       :data-color="store.getTheme"
       ><p>{{ $t("log-in") }}</p></NuxtLink
     >
-    <Message class="hk-message-icon"></Message>
+
+    <NuxtLink
+      class="hk-message-icon"
+      :to="
+        (i18n.locale.value === 'es' ? '/' + i18n.locale.value : '') +
+        '/contact-us'
+      "
+      :data-color="store.getTheme"
+    >
+      <Message class="hk-message-icon__svg" />
+    </NuxtLink>
   </div>
 </template>
 
@@ -99,9 +109,20 @@ const i18n = useI18n();
 }
 
 .hk-message-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: rem(30px);
   height: rem(30px);
   padding-right: rem(20px);
-  scale: 1;
+  margin-bottom: rem(-2px);
+  scale: 1.9;
+
+  &[data-color="light"] {
+    color: $font-color--dark;
+  }
+  &[data-color="dark"] {
+    color: $font-color--light;
+  }
 }
 </style>

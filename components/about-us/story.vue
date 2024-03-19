@@ -45,6 +45,11 @@ const store = useHackacodeStore();
     color: font-color--light;
   }
 
+  &__title {
+    margin-top: rem(30px);
+    padding-left: 10rem;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -60,6 +65,7 @@ const store = useHackacodeStore();
 
     h3 {
       font-size: $font-size--big;
+      font-weight: $font-weight--bold;
     }
   }
 
@@ -77,13 +83,7 @@ const store = useHackacodeStore();
 
     p {
       font-size: $font-size--medium;
-      margin-top: 0;
     }
-  }
-
-  &__content-image {
-    width: 80rem;
-    height: 30rem;
   }
 }
 </style>

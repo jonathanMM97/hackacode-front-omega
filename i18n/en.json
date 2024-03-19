@@ -37,5 +37,18 @@
     "community": "Partner community to collaborate and share",
     "dollar": "Continuous collaboration and better travel deals",
     "banner": "Get the dream trip without headaches"
+  },
+  "contact-us": {
+    "title-1": "Wanna",
+    "title-2": "know",
+    "title-3": "more?",
+    "description": "Let's talk about all the benefits we offer you just for being with us!",
+    "form-1": "Name",
+    "placeholder-1": "James Smith",
+    "form-2": "Email",
+    "placeholder-2": "example{'@'}example.com",
+    "form-3": "Comment or message",
+    "placeholder-3": "Your message here",
+    "button": "Send"
   }
 }

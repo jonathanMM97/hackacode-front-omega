@@ -44,7 +44,6 @@ const store = useHackacodeStore();
   &__programme-section {
     display: flex;
     flex-direction: row;
-    margin-top: 5rem;
 
     h2 {
       font-size: $font-size--large;

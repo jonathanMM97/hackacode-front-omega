@@ -91,6 +91,7 @@ const changeLanguage = (): void => {
     font-weight: $font-weight--bold;
     cursor: pointer;
     justify-content: space-between;
+    align-items: center;
     gap: rem(10px);
   }
 }
@@ -108,6 +109,7 @@ const changeLanguage = (): void => {
 .hk-chevron-icon {
   width: rem(50px);
   height: rem(50px);
+  margin-bottom: rem(-2px);
   scale: 1;
 }
 </style>
