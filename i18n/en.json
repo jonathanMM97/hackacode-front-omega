@@ -58,5 +58,25 @@
     "form-2": "Password",
     "placeholder-2": "Your password here",
     "button": "Send"
+  },
+  "manage": {
+    "welcome": "Welcome, ",
+    "message-1": "Thank you very much for your effort and dedication. We are delighted to have you on the team.",
+    "message-2": "¡You're great!",
+    "operations": "What operation will you perform?",
+    "active": "Active service",
+    "service-1": "Airline tickets",
+    "service-2": "Train tickets",
+    "service-3": "Bus tickets",
+    "service-4": "Hotel per night/s",
+    "service-5": "Car rental",
+    "service-6": "Tours",
+    "service-7": "Event Tickets",
+    "service-8": "Packages"
+  },
+  "form-service": {
+    "plane": {
+      "form-1": "dia de vuelo"
+    }
   }
 }
