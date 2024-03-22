@@ -13,7 +13,7 @@ export const useHackacodeStore = defineStore("hackacode", {
     },
     getOption() {
       this.option = JSON.parse(window.localStorage.getItem("currentOption"))
-      return this.option === null ? 'main' : this.theme
+      return this.option === null ? 'main' : this.option
     },
   },
   actions: {
@@ -22,10 +22,14 @@ export const useHackacodeStore = defineStore("hackacode", {
       this.theme = theme
     },
     setOption(op) {
+      console.log(this.option, op)
       if (this.option !== op) {
-        window.localStorage.setItem("currentTheme", JSON.stringify(op))
+        console.log('entra')
+        window.localStorage.setItem("currentOption", JSON.stringify(op))
         this.option = op;
       } else {
+        console.log('eoooooo')
+        window.localStorage.setItem("currentOption", JSON.stringify('main'))
         this.option = "main";
       }
     },
