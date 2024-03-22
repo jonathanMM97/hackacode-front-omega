@@ -23,6 +23,12 @@ jobs:
         with:
           role-to-assume: ${{ secrets.AWS_IAM_ROLE }}
           aws-region: ${{ secrets.AWS_IAM_REGION }}
-      - name: Sync files to the bucket and invalidate CloudFront cache
-        run: |
-          aws s3 sync dist s3://${{ secrets.AWS_NAME }} --delete
+      - uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete --exclude '.git*/*'
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_NAME }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_KEY_PASS }}
+          AWS_REGION: ${{ secrets.AWS_IAM_REGION }}
+          SOURCE_DIR: 'dist'
