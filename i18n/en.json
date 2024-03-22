@@ -1,0 +1,82 @@
+{
+  "language": "Eng",
+  "about-us": "About us",
+  "customers": "Customers",
+  "log-in": "Log in",
+  "main": {
+    "slogan": "It is not just a trip, it is an experience.",
+    "second-section": {
+      "title": "A simple request equals a great experience",
+      "paragraph-1": "From TravelSation we work so that you don't have to organize every detail of your trip you want to have.",
+      "paragraph-2": "With a simple request you can forget about having to organize all the datails for you."
+    },
+    "third-section": {
+      "title": "For all people - all the peace of mind, no headaches at all.",
+      "paragraph-1": "You can be up and running in minutes and traveling as much as you want. Whatever your trip, TravelSation has you covered.",
+      "paragraph-2": "Can have trip priced as they see fit, TravelSation does not set a minimum price.",
+      "button": "Try it now"
+    }
+  },
+  "about": {
+    "title": "About TravelSation",
+    "content-section": {
+      "title": "We powered the travel",
+      "paragraph-1": "We do this with unique pricing and offerings that are always looking out for each of our customers.",
+      "paragraph-2": "We provide the best offer in the industry thanks to the perfect combination of advanced technology and personalized attention. In our commitment to empowering travel, we strive to create unforgettable experiences for every traveler, from the most intrepid adventurers to those seeking a tranquil retreat.",
+      "paragraph-3": "Our passion for travel drives every aspect of our service, from selecting exciting destinations to finding the best rates and accommodation options.",
+      "paragraph-4": "Every step of the way, we are dedicated to exceeding our clients' expectations and making each trip a unique and unforgettable experience."
+    }
+  },
+  "text-customers": {
+    "title-1": "Our",
+    "title-2": "Partner Programme",
+    "paragraph-1": "Our mission is to provide our partners with the necessary elements so that they can have a seamless travel experience on every trip by scheduling travel. Extensive guides, documentation, an active community and expert support make us a pleasure to work with. With our offerings as a service and our full suite of operators, you can enjoy travel experiences without headeache.",
+    "title-3": "The Benefits",
+    "paragraph-2": "Our partner program gives you access to customized resources and expert assistance from the TravelSation team so you can get an experience that matches the quality of your service. You'll also become part of our partner community, where we share achievements and learn from each other. Benefits include:",
+    "services": "Personalised assistance and services",
+    "community": "Partner community to collaborate and share",
+    "dollar": "Continuous collaboration and better travel deals",
+    "banner": "Get the dream trip without headaches"
+  },
+  "contact-us": {
+    "title-1": "Wanna",
+    "title-2": "know",
+    "title-3": "more?",
+    "description": "Let's talk about all the benefits we offer you just for being with us!",
+    "form-1": "Name",
+    "placeholder-1": "James Smith",
+    "form-2": "Email",
+    "placeholder-2": "example{'@'}example.com",
+    "form-3": "Comment or message",
+    "placeholder-3": "Your message here",
+    "button": "Send"
+  },
+  "register": {
+    "title": "Login to your TravelSation account",
+    "form-1": "Email",
+    "placeholder-1": "Your email here",
+    "form-2": "Password",
+    "placeholder-2": "Your password here",
+    "button": "Send"
+  },
+  "manage": {
+    "welcome": "Welcome, ",
+    "message-1": "Thank you very much for your effort and dedication. We are delighted to have you on the team.",
+    "message-2": "¡You're great!",
+    "operations": "What operation will you perform?",
+    "active": "Active service",
+    "service-1": "Airline tickets",
+    "service-2": "Train tickets",
+    "service-3": "Bus tickets",
+    "service-4": "Hotel per night/s",
+    "service-5": "Car rental",
+    "service-6": "Tours",
+    "service-7": "Event Tickets",
+    "service-8": "Packages"
+  },
+  "form-service": {
+    "plane": {
+      "form-1": "dia de vuelo"
+    }
+  }
+}

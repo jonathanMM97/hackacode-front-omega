@@ -10,8 +10,18 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "axios": "^1.6.8",
     "nuxt": "^3.10.3",
+    "pinia": "^2.1.7",
     "vue": "^3.4.19",
-    "vue-router": "^4.3.0"
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
+    "@pinia/nuxt": "^0.5.1",
+    "nuxt-svgo": "^4.0.0",
+    "prettier": "3.2.5",
+    "sass": "^1.71.1"
   }
 }

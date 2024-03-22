@@ -1,0 +1,77 @@
+{
+  "language": "Esp",
+  "about-us": "Conócenos",
+  "customers": "Clientes",
+  "log-in": "Inicia sesión",
+  "main": {
+    "slogan": "No es solo un viaje, es una esperiencia.",
+    "second-section": {
+      "title": "Una sola solicitud consigue una gran experiencia.",
+      "paragraph-1": "Desde TravelSation trabajamos para que no tengas que organizar cada detalle del viaje que quieras tener.",
+      "paragraph-2": "Con una simple petición podrás olvidarte de tener que organizar el viaje por ti mismo y nosotros organizaremos todos los detalles por ti."
+    },
+    "third-section": {
+      "title": "Para todas las personas: toda la tranquilidad, sin quebraderos de cabeza.",
+      "paragraph-1": "Se puede estar en la carretera en cuestión de minutos y disfrutar tanto como se desee. Sea cual sea su viaje, TravelSation le facilitará todo el proceso.",
+      "paragraph-2": "Pueden tener los viajes con el precio que consideren oportuno, TravelSation no establece un precio mínimo.",
+      "button": "Pruébalo ya"
+    }
+  },
+  "about": {
+    "title": "Sobre TravelSation",
+    "content-section": {
+      "title": "Aligeramos los viajes",
+      "paragraph-1": "Ofrecemos precios únicos y con unas ofertas siempre mirando por cada uno de nuestros clientes.",
+      "paragraph-2": "Proporcionamos la mejor oferta del sector gracias a la combinación perfecta de tecnología avanzada y atención personalizada. En nuestro compromiso por potenciar los viajes, nos esforzamos por crear experiencias inolvidables para cada viajero, desde los aventureros más intrépidos hasta aquellos que buscan un retiro tranquilo.",
+      "paragraph-3": "Nuestra pasión por los viajes impulsa cada aspecto de nuestro servicio, desde la selección de destinos emocionantes hasta la búsqueda de las mejores tarifas y opciones de alojamiento.",
+      "paragraph-4": "En cada paso del camino, estamos dedicados a superar las expectativas de nuestros clientes y convertir cada viaje en una experiencia única e inolvidable."
+    }
+  },
+  "text-customers": {
+    "title-1": "Nuestro",
+    "title-2": "Programa de Clientes",
+    "paragraph-1": "Nuestra misión es proporcionar a nuestros socios los elementos necesarios para que puedan tener una experiencia en cada viaje sin extrarse al programar los viajes. Las extensas guías, la documentación, una comunidad activa y un soporte experto hacen que sea un placer trabajar con nosotros. Con nuestras ofertas como servicio y nuestro completo conjunto de operadores, podrá disfrutar de experiencias en los viajes sin dolores de cabeza.",
+    "title-3": "Beneficios",
+    "paragraph-2": "Nuestro programa de socios le da acceso a recursos personalizados y a la asistencia experta del equipo de TravelSation para que pueda ofrecer una experiencia a la altura de la calidad de su servicio. También pasará a formar parte de nuestra comunidad de socios, donde compartimos logros y aprendemos unos de otros. Los beneficios incluyen:",
+    "services": "Asistencia y servicios personalizados",
+    "community": "Comunidad de socios para colaborar y compartir",
+    "dollar": "Colaboración continua y mejores ofertas de viajes",
+    "banner": "Consigue el viaje soñado sin quebraderos de cabeza"
+  },
+  "contact-us": {
+    "title-1": "Quieres",
+    "title-2": "saber",
+    "title-3": "más?",
+    "description": "¡Hablemos hoy mismo de todas las ventajas que le ofrecemos sólo por estar con nosotros!",
+    "form-1": "Nombre",
+    "placeholder-1": "José Antonio",
+    "form-2": "Email",
+    "placeholder-2": "ejemplo{'@'}ejemplo.com",
+    "form-3": "Comentario o mensaje",
+    "placeholder-3": "Tu mensaje aquí",
+    "button": "Enviar"
+  },
+  "register": {
+    "title": "Inicia sesión en tu cuenta de TravelSation",
+    "form-1": "Email",
+    "placeholder-1": "Tu email aquí",
+    "form-2": "Password",
+    "placeholder-2": "Tu contraseña aquí",
+    "button": "Enviar"
+  },
+  "manage": {
+    "welcome": "Bienvenido de nuevo, ",
+    "message-1": "Muchas gracias por tu esfuerzo y dedicación. Estamos encantados de tenerte en el equipo.",
+    "message-2": "¡Eres genial!",
+    "operations": "¿Qué operación realizará?",
+    "active": "Servicios activos",
+    "service-1": "Pasajes de avión",
+    "service-2": "Pasajes de tren",
+    "service-3": "Pasajes de colectivo",
+    "service-4": "Hotel por noche/s",
+    "service-5": "Alquiler de auto",
+    "service-6": "Excursiones",
+    "service-7": "Entradas a Eventos",
+    "service-8": "Paquetes"
+  }
+}
