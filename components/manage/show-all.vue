@@ -36,7 +36,6 @@
 </template>
 
 <script setup lang="ts">
-import ViewAll from "@/public/media/icon-all.svg";
 import Plane from "@/public/media/icon-plane.svg";
 import Bed from "@/public/media/icon-bed.svg";
 import Train from "@/public/media/icon-train.svg";

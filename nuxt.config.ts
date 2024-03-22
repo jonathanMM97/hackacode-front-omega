@@ -6,6 +6,12 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
   ],
+  piniaPersistedstate: {
+    cookieOptions: {
+      sameSite: 'strict',
+    },
+    storage: 'localStorage'
+  },
   i18n: {
     langDir: "i18n/",
     lazy: true,
