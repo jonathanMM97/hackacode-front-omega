@@ -6,22 +6,22 @@
 </template>
 
 <script lang="ts" setup>
-  defineProps({
-    id: {
-      type: String,
-      required: true,
-    },
-    required: {
-      type: Boolean,
-      default: false,
-    },
-  });
+defineProps({
+  id: {
+    type: String,
+    required: true,
+  },
+  required: {
+    type: Boolean,
+    default: false,
+  },
+});
 </script>
 
 <style lang="scss" scoped>
-  .motw-form-label {
-    font-family: $font-main;
-    font-weight: $font-weight--bold;
-    font-size: $font-size--medium;
-  }
+.motw-form-label {
+  font-family: $font-main;
+  font-weight: $font-weight--bold;
+  font-size: $font-size--medium;
+}
 </style>

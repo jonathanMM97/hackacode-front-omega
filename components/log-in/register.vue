@@ -1,10 +1,10 @@
 <template>
   <main class="hk-register" :data-color="store.getTheme">
     <div class="hk-register__form">
-      <h2>{{ $t('register.title') }}</h2>
+      <h2>{{ $t("register.title") }}</h2>
       <LogIn class="hk-register__fields" />
     </div>
-    <img class="hk-register__img" src="@/public/media/login.png">
+    <img class="hk-register__img" src="@/public/media/login.png" />
   </main>
 </template>
 
@@ -12,7 +12,6 @@
 import { useHackacodeStore } from "~/stores/Hackacode";
 
 const store = useHackacodeStore();
-
 </script>
 
 <style lang="scss">

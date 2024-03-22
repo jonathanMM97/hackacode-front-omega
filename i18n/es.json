@@ -58,5 +58,20 @@
     "form-2": "Password",
     "placeholder-2": "Tu contraseña aquí",
     "button": "Enviar"
+  },
+  "manage": {
+    "welcome": "Bienvenido de nuevo, ",
+    "message-1": "Muchas gracias por tu esfuerzo y dedicación. Estamos encantados de tenerte en el equipo.",
+    "message-2": "¡Eres genial!",
+    "operations": "¿Qué operación realizará?",
+    "active": "Servicios activos",
+    "service-1": "Pasajes de avión",
+    "service-2": "Pasajes de tren",
+    "service-3": "Pasajes de colectivo",
+    "service-4": "Hotel por noche/s",
+    "service-5": "Alquiler de auto",
+    "service-6": "Excursiones",
+    "service-7": "Entradas a Eventos",
+    "service-8": "Paquetes"
   }
 }

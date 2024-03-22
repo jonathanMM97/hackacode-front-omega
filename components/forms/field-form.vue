@@ -1,7 +1,15 @@
 <template>
   <div class="hk-field-form">
     <LabelForm :id="id">{{ messageLabel }}</LabelForm>
-    <input class="hk-field-form__text" :type="id" :id="id" :placeholder="placeholder" v-model="value" @change="$emit('onChange', value)" :data-color="store.getTheme" />
+    <input
+      class="hk-field-form__text"
+      :type="id"
+      :id="id"
+      :placeholder="placeholder"
+      v-model="value"
+      @change="$emit('onChange', value)"
+      :data-color="store.getTheme"
+    />
     <p v-if="error">{{ messageError }}</p>
   </div>
 </template>
@@ -14,32 +22,32 @@ const store = useHackacodeStore();
 const props = defineProps({
   id: {
     type: String,
-    required: true
+    required: true,
   },
   messageLabel: {
     type: String,
-    required: true
+    required: true,
   },
   modelValue: {
     type: String,
-    required: true
+    required: true,
   },
   error: {
     type: Boolean,
-    required: true
+    required: true,
   },
   messageError: {
     type: String,
-    required: true
+    required: true,
   },
   placeholder: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
 });
-defineEmits(['onChange']);
+defineEmits(["onChange"]);
 
-const value = ref(props.modelValue)
+const value = ref(props.modelValue);
 </script>
 
 <style lang="scss">
@@ -49,13 +57,13 @@ const value = ref(props.modelValue)
   width: 80%;
   gap: rem(20px);
 
-  &__text{
+  &__text {
     width: 100%;
     border: none;
     padding: 5px;
     outline: none;
     background: transparent;
-    
+
     &[data-color="light"] {
       border-bottom: 1px solid $font-color--dark;
     }
