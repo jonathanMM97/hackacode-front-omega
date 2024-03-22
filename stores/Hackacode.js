@@ -22,13 +22,10 @@ export const useHackacodeStore = defineStore("hackacode", {
       this.theme = theme
     },
     setOption(op) {
-      console.log(this.option, op)
       if (this.option !== op) {
-        console.log('entra')
         window.localStorage.setItem("currentOption", JSON.stringify(op))
         this.option = op;
       } else {
-        console.log('eoooooo')
         window.localStorage.setItem("currentOption", JSON.stringify('main'))
         this.option = "main";
       }
