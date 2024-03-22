@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: '16'
       - name: Installing dependencies
-        run: npm ci --foreground-script
+        run: npm i
       - name: Building project
         run: npm run generate
       - name: Configure AWS credentials from Websites account
