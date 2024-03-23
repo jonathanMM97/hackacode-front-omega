@@ -53,8 +53,8 @@
   },
   "register": {
     "title": "Inicia sesión en tu cuenta de TravelSation",
-    "form-1": "Email",
-    "placeholder-1": "Tu email aquí",
+    "form-1": "Usuario",
+    "placeholder-1": "Tu usuario aquí",
     "form-2": "Password",
     "placeholder-2": "Tu contraseña aquí",
     "button": "Enviar"
@@ -64,7 +64,7 @@
     "message-1": "Muchas gracias por tu esfuerzo y dedicación. Estamos encantados de tenerte en el equipo.",
     "message-2": "¡Eres genial!",
     "operations": "¿Qué operación realizará?",
-    "active": "Servicios activos",
+    "active": "Servicios disponibles",
     "service-1": "Pasajes de avión",
     "service-2": "Pasajes de tren",
     "service-3": "Pasajes de colectivo",
@@ -73,5 +73,85 @@
     "service-6": "Excursiones",
     "service-7": "Entradas a Eventos",
     "service-8": "Paquetes"
+  },
+  "customer-plane": {
+    "add": "Reservar un vuelo para el viaje",
+    "search": "Buscar una reserva de vuelo",
+    "cancel": "Cancelar una reserva de vuelo"
+  },
+  "customer-bed": {
+    "add": "Reservar una habitacion para el viaje",
+    "search": "Buscar una reserva de habitacion",
+    "cancel": "Cancelar una reserva de habitacion"
+  },
+  "customer-train": {
+    "add": "Reservar un tren para el viaje",
+    "search": "Buscar una reserva de tren",
+    "cancel": "Cancelar una reserva de tren"
+  },
+  "customer-car": {
+    "add": "Reservar un coche para el viaje",
+    "search": "Buscar una reserva de coche",
+    "cancel": "Cancelar una reserva de coche"
+  },
+  "customer-group": {
+    "add": "Reservar un grupo para el viaje",
+    "search": "Buscar una reserva de grupo",
+    "cancel": "Cancelar una reserva de grupo"
+  },
+  "customer-ticket": {
+    "add": "Reservar un evento para el viaje",
+    "search": "Buscar una reserva de evento",
+    "cancel": "Cancelar una reserva de evento"
+  },
+  "customer-user": {
+    "add": "Reservar un usuario para el viaje",
+    "search": "Buscar una reserva de usuario",
+    "cancel": "Cancelar una reserva de usuario"
+  },
+  "customer-bus": {
+    "add": "Reservar un bus para el viaje",
+    "search": "Buscar una reserva de bus",
+    "cancel": "Cancelar una reserva de bus"
+  },
+  "service-plane": {
+    "add": "Añadir un nuevo servicio de vuelo",
+    "search": "Buscar un servicio de vuelo",
+    "cancel": "Cancelar un servicio de vuelo"
+  },
+  "service-bed": {
+    "add": "Añadir un nuevo servicio de hotel",
+    "search": "Buscar un servicio de hotel",
+    "cancel": "Cancelar un servicio de hotel"
+  },
+  "service-train": {
+    "add": "Añadir un nuevo servicio de tren",
+    "search": "Buscar un servicio de tren",
+    "cancel": "Cancelar un servicio de tren"
+  },
+  "service-car": {
+    "add": "Añadir un nuevo servicio de taxi",
+    "search": "Buscar un servicio de taxi",
+    "cancel": "Cancelar un servicio de taxi"
+  },
+  "service-group": {
+    "add": "Añadir un nuevo servicio de grupo",
+    "search": "Buscar un servicio de grupo",
+    "cancel": "Cancelar un servicio de grupo"
+  },
+  "service-ticket": {
+    "add": "Añadir un nuevo servicio de evento",
+    "search": "Buscar un servicio de evento",
+    "cancel": "Cancelar un servicio de evento"
+  },
+  "service-user": {
+    "add": "Añadir un nuevo servicio de vuelo",
+    "search": "Buscar un servicio de vuelo",
+    "cancel": "Cancelar un servicio de vuelo"
+  },
+  "service-bus": {
+    "add": "Añadir un nuevo servicio de autobús",
+    "search": "Buscar un servicio de autobús",
+    "cancel": "Cancelar un servicio de autobús"
   }
 }
