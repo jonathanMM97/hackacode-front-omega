@@ -29,21 +29,20 @@
       <p>{{ $t("manage.service-7") }}</p>
       <img class="hk-services__active" src="@/public/media/icon-active.png" />
     </div>
-    <div class="hk-services__status">
-      <p>{{ $t("manage.service-8") }}</p>
-      <img class="hk-services__active" src="@/public/media/icon-active.png" />
-    </div>
   </div>
 </template>
 
 <style lang="scss">
 .hk-services {
   width: 300px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   font-size: $font-size--small;
   padding-left: 2rem;
+  padding-bottom: 2rem;
   margin-right: 6rem;
+  margin-top: 4rem;
   border-radius: 20px;
   gap: 20px;
   box-shadow: -10px 10px 10px rgba($font-color--dark, 0.2);

@@ -3,9 +3,9 @@
     <div class="hk-contact-form__fields">
       <FieldForm
         class="hk-contact-form__field"
-        id="'email'"
+        id="'text'"
         :messageLabel="$t('register.form-1')"
-        :model-value="state.email"
+        :model-value="state.user"
         :error="false"
         messageError="''"
         :placeholder="$t('register.placeholder-1')"
@@ -27,19 +27,38 @@
 </template>
 
 <script setup lang="ts">
+import axios from 'axios';
+
 const state = reactive({
+  user: "",
   pass: "",
-  email: "",
 });
 const validateForm = async () => {
-  // to do....
+  // to do..
+  const auth = await axios.post('http://localhost:8080/api/employee/login', {"username": state.user, "password": state.pass})
+  console.log(auth);
+  console.log(state);
+  axios.get('http://localhost:8080/api/client/getAll', {
+    headers: {
+      Authorization: 'Bearer ' + auth.data.token
+    }
+  })
+      .then(
+        res => {
+          console.log(res);
+        }
+      ).catch(
+        err => {
+          console.log(err);
+        }
+      )
 };
 
 const changePass = (value: string) => {
   state.pass = value;
 };
 const changeEmail = (value: string) => {
-  state.email = value;
+  state.user = value;
 };
 </script>
 
