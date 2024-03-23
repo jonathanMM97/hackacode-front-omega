@@ -53,8 +53,8 @@
   },
   "register": {
     "title": "Login to your TravelSation account",
-    "form-1": "Email",
-    "placeholder-1": "Your email here",
+    "form-1": "User",
+    "placeholder-1": "Your user here",
     "form-2": "Password",
     "placeholder-2": "Your password here",
     "button": "Send"
@@ -64,7 +64,7 @@
     "message-1": "Thank you very much for your effort and dedication. We are delighted to have you on the team.",
     "message-2": "¡You're great!",
     "operations": "What operation will you perform?",
-    "active": "Active service",
+    "active": "Available services",
     "service-1": "Airline tickets",
     "service-2": "Train tickets",
     "service-3": "Bus tickets",
@@ -78,5 +78,45 @@
     "plane": {
       "form-1": "dia de vuelo"
     }
+  },
+  "customer-plane": {
+    "add": "Book a flight for the trip",
+    "search": "Search for a booked flight",
+    "cancel": "Cancel a booked flight"
+  },
+  "customer-bed": {
+    "add": "Book a night for the trip",
+    "search": "Search for a booked night",
+    "cancel": "Cancel a booked night"
+  },
+  "customer-train": {
+    "add": "Book a train for the trip",
+    "search": "Search for a booked train",
+    "cancel": "Cancel a booked train"
+  },
+  "customer-car": {
+    "add": "Book a car for the trip",
+    "search": "Search for a booked car",
+    "cancel": "Cancel a booked car"
+  },
+  "customer-group": {
+    "add": "Book a group for the trip",
+    "search": "Search for a booked group",
+    "cancel": "Cancel a booked group"
+  },
+  "customer-ticket": {
+    "add": "Book a ticket for the trip",
+    "search": "Search for a booked ticket",
+    "cancel": "Cancel a booked ticket"
+  },
+  "customer-user": {
+    "add": "Book a user for the trip",
+    "search": "Search for a booked user",
+    "cancel": "Cancel a booked user"
+  },
+  "customer-bus": {
+    "add": "Book a bus for the trip",
+    "search": "Search for a booked bus",
+    "cancel": "Cancel a booked bus"
   }
 }

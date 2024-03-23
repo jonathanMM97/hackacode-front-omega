@@ -20,8 +20,12 @@
     "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
     "@pinia/nuxt": "^0.5.1",
+    "@vue/test-utils": "^2.4.5",
+    "happy-dom": "^13.10.1",
     "nuxt-svgo": "^4.0.0",
+    "playwright-core": "^1.42.1",
     "prettier": "3.2.5",
-    "sass": "^1.71.1"
+    "sass": "^1.71.1",
+    "vitest": "^1.4.0"
   }
 }
