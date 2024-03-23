@@ -35,10 +35,10 @@ const state = reactive({
 });
 const validateForm = async () => {
   // to do..
-  const auth = await axios.post('http://localhost:8080/api/employee/login', {"username": state.user, "password": state.pass})
+  const auth = await axios.post('http://vps-3991861-x.dattaweb.com:8080/api/employee/login', {"username": state.user, "password": state.pass})
   console.log(auth);
   console.log(state);
-  axios.get('http://localhost:8080/api/client/getAll', {
+  axios.get('http://vps-3991861-x.dattaweb.com:8080/api/client/getAll', {
     headers: {
       Authorization: 'Bearer ' + auth.data.token
     }
