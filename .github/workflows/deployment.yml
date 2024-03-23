@@ -2,7 +2,7 @@ name: Deploy DEV/PRO
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build:
     runs-on: [ubuntu-latest]
@@ -13,16 +13,16 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: '18.x'
       - name: Installing dependencies
-        run: npm ci --foreground-script
+        run: npm i
       - name: Building project
         run: npm run generate
       - name: Configure AWS credentials from Websites account
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: ${{ secret-AWS_IAM_ROLE }}
-          aws-region: ${{ secret-AWS_IAM_REGION }}
+          role-to-assume: ${{ secrets.AWS_IAM_ROLE }}
+          aws-region: ${{ secrets.AWS_IAM_REGION }}
       - name: Sync files to the bucket and invalidate CloudFront cache
         run: |
-          aws s3 sync dist s3://${{ secret.AWS_NAME }} --delete
+          aws s3 sync dist s3://${{ secrets.AWS_NAME }} --delete

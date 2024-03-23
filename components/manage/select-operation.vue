@@ -1,29 +1,34 @@
 <template>
   <div class="hk-select-operation">
-    <Plus class="hk-select-operation__icon" />
-    <Search class="hk-select-operation__icon" />
-    <Delete class="hk-select-operation__icon" />
+    <img class="hk-select-operation__icon hk-operation-customer" src="@/public/media/customer.png">
+    <img class="hk-select-operation__icon hk-operation-service" src="@/public/media/service.png">
   </div>
 </template>
 
 <script setup lang="ts">
-import Plus from "@/public/media/icon-plus.svg";
-import Search from "@/public/media/icon-search.svg";
-import Delete from "@/public/media/icon-delete.svg";
 </script>
 
 <style lang="scss">
 .hk-select-operation {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: rem(30px);
   padding-top: 1rem;
 
   &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: rem(40px);
     height: rem(40px);
     padding: rem(10px);
     border-radius: rem(20px);
   }
+}
+
+.hk-operation-service {
+  scale: 2.5;
+  height: rem(30px);
 }
 </style>
