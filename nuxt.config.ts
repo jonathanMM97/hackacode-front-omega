@@ -90,6 +90,7 @@ export default defineNuxtConfig({
       preprocessorOptions: {
         scss: {
           additionalData: `
+                @import "./assets/styles/_default.scss";
                 @import "./assets/styles/_functions.scss";
                 @import "./assets/styles/vars/_vars.scss";
                 @import "./assets/styles/vars/_breakpoints.scss";

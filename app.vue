@@ -1,9 +1,9 @@
 <template>
-  <div class="page" :data-color="store.getTheme">
+  <main class="page" :data-color="store.getTheme">
     <Header />
     <NuxtPage />
     <Footer />
-  </div>
+  </main>
 </template>
 
 <script setup lang="ts">
