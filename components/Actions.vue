@@ -72,10 +72,15 @@ const getDataUser = async () =>{
   })
       .then(
         res => {
-          allow.value = true;
-          console.log(allow.value)
-          console.log(res)
-          router.push('/manage')
+          if (!allow.value) {
+
+            allow.value = true;
+            console.log(allow.value)
+            console.log(res.data.lastname)
+            store.setNameUser(res.data.name)
+            store.setLastName(res.data.lastname)
+            router.push('/manage')
+          }
         }
       ).catch(
         err => {
