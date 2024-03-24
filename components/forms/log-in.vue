@@ -28,30 +28,18 @@
 
 <script setup lang="ts">
 import axios from 'axios';
+import { useHackacodeStore } from "~/stores/Hackacode";
+
+const store = useHackacodeStore();
 
 const state = reactive({
   user: "",
   pass: "",
 });
 const validateForm = async () => {
-  // to do..
   const auth = await axios.post('http://vps-3991861-x.dattaweb.com:8080/api/employee/login', {"username": state.user, "password": state.pass})
-  console.log(auth);
-  console.log(state);
-  axios.get('http://vps-3991861-x.dattaweb.com:8080/api/employee/getByUsername/' + state.user, {
-    headers: {
-      Authorization: 'Bearer ' + auth.data.token
-    }
-  })
-      .then(
-        res => {
-          console.log(res);
-        }
-      ).catch(
-        err => {
-          console.log(err);
-        }
-      )
+  store.setToken(auth.data.token)
+  store.setUser(state.user)
 };
 
 const changePass = (value: string) => {

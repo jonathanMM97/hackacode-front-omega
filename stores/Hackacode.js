@@ -4,6 +4,8 @@ export const useHackacodeStore = defineStore("hackacode", {
   state: () => ({
     theme: ref("light"),
     option: ref("main"),
+    user: ref('none'),
+    token: ref("none"),
   }),
   persist: true,
   getters: {
@@ -14,6 +16,14 @@ export const useHackacodeStore = defineStore("hackacode", {
     getOption() {
       this.option = JSON.parse(window.localStorage.getItem("currentOption"))
       return this.option === null ? 'main' : this.option
+    },
+    getToken() {
+      this.token = JSON.parse(window.localStorage.getItem("currentToken"))
+      return this.token === null ? 'none' : this.token
+    },
+    getUser() {
+      this.user = JSON.parse(window.localStorage.getItem("currentUser"))
+      return this.user === null ? 'none' : this.user
     },
   },
   actions: {
@@ -29,6 +39,14 @@ export const useHackacodeStore = defineStore("hackacode", {
         window.localStorage.setItem("currentOption", JSON.stringify('main'))
         this.option = "main";
       }
+    },
+    setToken(token) {
+      window.localStorage.setItem("currentToken", JSON.stringify(token))
+      this.token = token
+    },
+    setUser(user) {
+      window.localStorage.setItem("currentUser", JSON.stringify(user))
+      this.user = user
     },
   },
 });
