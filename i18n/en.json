@@ -158,6 +158,14 @@
   "dashboard-page": "Dashboard",
   "services": "Services",
   "dashboard": {
+    "name-title": "Write a name for a client:",
+    "lastName-title": "Write a last name for a client:",
+    "dni-title": "Write dni for a client:",
+    "birthday-title": "Write the birthday for a client:",
+    "nacionality-title": "Write nacionality for a client:",
+    "phoneNumber-title": "Write phone number for a client:",
+    "email-title": "Write email for a client:",
+    "username-title": "Write username for a client:",
     "description-title": "Write a short description:",
     "description-placeholder": "The description here",
     "destination-title": "Write a short destination:",
@@ -166,5 +174,6 @@
     "cost-title": "Introduce the cost:",
     "amount-title": "Introduce the amount offer",
     "available-title": "Choose available"
-  }
+  },
+  "sales": "Sales"
 }

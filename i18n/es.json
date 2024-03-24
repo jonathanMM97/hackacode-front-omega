@@ -152,6 +152,14 @@
   "dashboard-page": "Menu",
   "services": "Servicios",
   "dashboard": {
+    "name-title": "Nombre del cliente:",
+    "lastName-title": "Apellido del cliente:",
+    "dni-title": "Dni del cliente:",
+    "birthday-title": "Día de nacimiento:",
+    "nacionality-title": "Nacionalidad:",
+    "phoneNumber-title": "Número de teléfono:",
+    "email-title": "Email:",
+    "username-title": "Nombre de usuario:",
     "description-title": "Introduce una breve descripción:",
     "description-placeholder": "La descripción aquí",
     "destination-title": "Escribe el destino:",
@@ -160,5 +168,6 @@
     "cost-title": "Introduce the cost:",
     "amount-title": "Introduce la cantidad ofertada",
     "available-title": "Elige la disponibilidad"
-  }
+  },
+  "sales": "Ventas"
 }
