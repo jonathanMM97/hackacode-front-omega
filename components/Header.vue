@@ -2,7 +2,8 @@
   <header class="hk-header" :data-color="store.getTheme">
     <div class="hk-layout">
       <NuxtLink
-        :to="i18n.locale.value === 'es' ? '/' + i18n.locale.value : '/'"
+        :to="redirectPage"
+        v-on:click="disableSidebar"
       >
         <Logo class="hk-layout__logo-icon" :data-color="store.getTheme"></Logo>
       </NuxtLink>
@@ -19,6 +20,14 @@ import { useHackacodeStore } from "~/stores/Hackacode";
 
 const store = useHackacodeStore();
 const i18n = useI18n();
+
+const isLogin = store.getShowUserLogin ? '/manage' : '/';
+const redirectPage = i18n.locale.value === 'es' ? isLogin + i18n.locale.value : isLogin;
+
+const disableSidebar = () => {
+  store.setShowSidebar(false);
+  store.setCurrentPage('main')
+};
 </script>
 
 <style lang="scss">

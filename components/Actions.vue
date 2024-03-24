@@ -65,7 +65,7 @@ const logOut = () => {
 }
 
 const getDataUser = async () =>{
-  axios.get('http://vps-3991861-x.dattaweb.com:8080/api/employee/getByUsername/' + store.getUser, {
+  await axios.get('http://vps-3991861-x.dattaweb.com:8080/api/employee/getByUsername/' + store.getUser, {
     headers: {
       Authorization: 'Bearer ' + store.getToken
     }
@@ -75,8 +75,6 @@ const getDataUser = async () =>{
           if (!allow.value) {
 
             allow.value = true;
-            console.log(allow.value)
-            console.log(res.data.lastname)
             store.setNameUser(res.data.name)
             store.setLastName(res.data.lastname)
             router.push('/manage')
@@ -84,13 +82,20 @@ const getDataUser = async () =>{
         }
       ).catch(
         err => {
-          allow.value = false;
+          if (allow.value) {
+            allow.value = false;
+            store.setNameUser('none')
+            store.setLastName('none')
+            store.setToken('none')
+            store.setUser('none')
+            store.setShowUserLogin(false)
+            router.push('/')
+          }
         }
       )
 }
 
 onMounted(() => {
-  console.log(allow.value)
   getDataUser()
 })
 

@@ -8,6 +8,9 @@ export const useHackacodeStore = defineStore("hackacode", {
     token: ref("none"),
     name_user: ref('none'),
     last_name: ref('none'),
+    showUserLogin: ref(false),
+    showSidebar: ref(false),
+    currentPage: ref('main'),
   }),
   persist: true,
   getters: {
@@ -34,6 +37,18 @@ export const useHackacodeStore = defineStore("hackacode", {
     getLastName() {
       this.last_name = JSON.parse(window.localStorage.getItem("currentLastName"))
       return this.last_name === null ? 'none' : this.last_name
+    },
+    getShowUserLogin() {
+      this.showUserLogin = JSON.parse(window.localStorage.getItem("currentShowUserLogin"))
+      return this.showUserLogin === null ? 'none' : this.showUserLogin
+    },
+    getShowSidebar() {
+      this.showUserLogin = JSON.parse(window.localStorage.getItem("currentShowSidebar"))
+      return this.showSidebar === null ? 'none' : this.showSidebar
+    },
+    getCurrentPage() {
+      this.currentPage = JSON.parse(window.localStorage.getItem("currentPage"))
+      return this.currentPage === null ? 'main' : this.currentPage
     },
   },
   actions: {
@@ -65,6 +80,18 @@ export const useHackacodeStore = defineStore("hackacode", {
     setLastName(last_name) {
       window.localStorage.setItem("currentLastName", JSON.stringify(last_name))
       this.last_name = last_name
+    },
+    setShowUserLogin(showUserLogin) {
+      window.localStorage.setItem("currentShowUserLogin", JSON.stringify(showUserLogin))
+      this.showUserLogin = showUserLogin
+    },
+    setShowSidebar(showSidebar) {
+      window.localStorage.setItem("currentShowSidebar", JSON.stringify(showSidebar))
+      this.showSidebar = showSidebar
+    },
+    setCurrentPage(currentPage) {
+      window.localStorage.setItem("currentPage", JSON.stringify(currentPage))
+      this.currentPage = currentPage
     },
   },
 });

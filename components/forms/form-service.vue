@@ -3,20 +3,20 @@
     <div v-if="operation === 'none'" class="hk-form-services__select">
       <div class="hk-form-services__select-op" v-on:click="getOperation('add')" data-img="add">
         <div class="hk-form-services__select-text">
-          <h2>{{ $t('customer-' + store.getOption + ".add") }}</h2>
-          <h2 v-if="false">{{ $t('service-' + store.getOption + ".add") }}</h2>
+          <h2 v-if="store.getCurrentPage === 'client'">{{ $t('customer-' + store.getOption + ".add") }}</h2>
+          <h2 v-if="store.getCurrentPage === 'services'">{{ $t('service-' + store.getOption + ".add") }}</h2>
         </div>
       </div>
       <div class="hk-form-services__select-op" v-on:click="getOperation('search')" data-img="search">
         <div class="hk-form-services__select-text">
-          <h2>{{ $t('customer-' + store.getOption + ".search") }}</h2>
-          <h2 v-if="false">{{ $t('service-' + store.getOption + ".search") }}</h2>
+          <h2 v-if="store.getCurrentPage === 'client'">{{ $t('customer-' + store.getOption + ".search") }}</h2>
+          <h2 v-if="store.getCurrentPage === 'services'">{{ $t('service-' + store.getOption + ".search") }}</h2>
         </div>
       </div>
       <div class="hk-form-services__select-op" v-on:click="getOperation('cancel')" data-img="cancel">
         <div class="hk-form-services__select-text">
-          <h2>{{ $t('customer-' + store.getOption + ".cancel") }}</h2>
-          <h2 v-if="false">{{ $t('service-' + store.getOption + ".cancel") }}</h2>
+          <h2 v-if="store.getCurrentPage === 'client'">{{ $t('customer-' + store.getOption + ".cancel") }}</h2>
+          <h2 v-if="store.getCurrentPage === 'services'">{{ $t('service-' + store.getOption + ".cancel") }}</h2>
         </div>
       </div>
     </div>

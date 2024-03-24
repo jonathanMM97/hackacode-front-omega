@@ -1,5 +1,5 @@
 <template>
-  <div class="hk-profile">
+  <div class="hk-profile" :data-color="store.getTheme">
     <img class="hk-profile__img" src="@/public/media/foto-perfil.png" />
     <h4>{{ store.getNameUser }} {{ store.getLastName }}</h4>
     <p>{{ $t("manage.message-1") }}<br /><br />{{ $t("manage.message-2") }}</p>
@@ -20,6 +20,13 @@ const store = useHackacodeStore();
   justify-content: center;
   align-items: center;
   transform: translateX(-100px);
+
+  &[data-color="light"] {
+    color: $font-color--dark;
+  }
+  &[data-color="dark"] {
+    color: $font-color--light;
+  }
 
   &__img {
     width: 300px;

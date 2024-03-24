@@ -1,5 +1,5 @@
 <template>
-  <div class="hk-services">
+  <div class="hk-services" :data-color="store.getTheme">
     <h4>{{ $t("manage.active") }}</h4>
     <div class="hk-services__status">
       <p>{{ $t("manage.service-1") }}</p>
@@ -32,6 +32,12 @@
   </div>
 </template>
 
+<script setup lang="ts">
+import { useHackacodeStore } from "~/stores/Hackacode";
+
+const store = useHackacodeStore();
+</script>
+
 <style lang="scss">
 .hk-services {
   width: 300px;
@@ -45,8 +51,16 @@
   margin-top: 4rem;
   border-radius: 20px;
   gap: 20px;
-  box-shadow: -10px 10px 10px rgba($font-color--dark, 0.2);
   transform: translateX(-150px);
+
+  &[data-color="light"] {
+    color: $font-color--dark;
+    box-shadow: -10px 10px 10px rgba($font-color--dark, 0.2);
+  }
+  &[data-color="dark"] {
+    color: $font-color--light;
+    box-shadow: -10px 10px 10px rgba($font-color--light, 0.2);
+  }
 
   h4 {
     font-size: 26px;
