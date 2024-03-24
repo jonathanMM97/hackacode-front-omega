@@ -24,7 +24,7 @@
     >
 
     <div v-if="store.getShowUserLogin" class="hk-selector__content-main" v-on:click="showSideBar('main')" :data-page="store.getCurrentPage">
-      <p>{{ $t('dashboard') }}</p>
+      <p>{{ $t('dashboard-page') }}</p>
     </div>
     <div v-if="store.getShowUserLogin" class="hk-selector__content-client" v-on:click="showSideBar('client')" :data-page="store.getCurrentPage">
       <p>{{ $t('customers') }}</p>
@@ -46,9 +46,11 @@ const showSideBar = (page): void => {
     store.setShowSidebar(true)
   } else {
     store.setShowSidebar(false)
+    store.setOption('main')
   }
   store.setCurrentPage(page)
   store.setOption('main')
+  store.setOperation('none')
 }
 </script>
 

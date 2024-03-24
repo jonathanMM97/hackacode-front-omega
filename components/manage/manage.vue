@@ -15,10 +15,6 @@
 import { useHackacodeStore } from "~/stores/Hackacode";
 
 const store = useHackacodeStore();
-
-onMounted(() => {
-  store.setCurrentPage('main')
-})
 </script>
 
 <style lang="scss">
@@ -52,6 +48,7 @@ onMounted(() => {
     position: absolute;
     width: 90rem;
     height: 44rem;
+    overflow: auto;
     left: 15rem;
     top: 12rem;
     border-radius: rem(20px);

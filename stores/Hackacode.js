@@ -12,6 +12,7 @@ export const useHackacodeStore = defineStore("hackacode", {
     showSidebar: ref(false),
     currentPage: ref('main'),
     user_rol: ref('none'),
+    operation: ref('none'),
   }),
   persist: true,
   getters: {
@@ -55,6 +56,10 @@ export const useHackacodeStore = defineStore("hackacode", {
       this.user_rol = JSON.parse(window.localStorage.getItem("userRol"))
       return this.user_rol === null ? 'none' : this.user_rol
     },
+    getOperation() {
+      this.operation = JSON.parse(window.localStorage.getItem("currentOperation"))
+      return this.operation === null ? 'none' : this.operation
+    },
   },
   actions: {
     setTheme(theme) {
@@ -97,10 +102,17 @@ export const useHackacodeStore = defineStore("hackacode", {
     setCurrentPage(currentPage) {
       window.localStorage.setItem("currentPage", JSON.stringify(currentPage))
       this.currentPage = currentPage
+      if (this.currentPage === 'main') {
+        setOperation('none')
+      }
     },
     setUserRol(userRol) {
       window.localStorage.setItem("userRol", JSON.stringify(userRol))
       this.user_rol = userRol
+    },
+    setOperation(operation) {
+      window.localStorage.setItem("currentOperation", JSON.stringify(operation))
+      this.operation = operation
     },
   },
 });
