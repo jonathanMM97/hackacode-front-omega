@@ -1,6 +1,6 @@
 <template>
   <main class="hk-manage">
-    <h2>{{ $t("manage.welcome") }}</h2>
+    <h2>{{ $t("manage.welcome") }} {{ store.getNameUser }}</h2>
     <div class="hk-manage__menu">
       <Sidebar />
       <div class="hk-manage__menu-selected">
@@ -10,7 +10,11 @@
   </main>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useHackacodeStore } from "~/stores/Hackacode";
+
+const store = useHackacodeStore();
+</script>
 
 <style lang="scss">
 .hk-manage {

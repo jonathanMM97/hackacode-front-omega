@@ -50,6 +50,7 @@ import Message from "@/public/media/message-icon.svg";
 import { useHackacodeStore } from "~/stores/Hackacode";
 import axios from 'axios'
 
+const router = useRouter()
 const store = useHackacodeStore();
 const i18n = useI18n();
 const allow = ref(false)
@@ -63,7 +64,7 @@ const logOut = () => {
   store.setUser('none');
 }
 
-const getDataUser = () => {
+const getDataUser = async () =>{
   axios.get('http://vps-3991861-x.dattaweb.com:8080/api/employee/getByUsername/' + store.getUser, {
     headers: {
       Authorization: 'Bearer ' + store.getToken
@@ -71,9 +72,15 @@ const getDataUser = () => {
   })
       .then(
         res => {
-          allow.value = true;
-          console.log(allow.value)
-          console.log(res)
+          if (!allow.value) {
+
+            allow.value = true;
+            console.log(allow.value)
+            console.log(res.data.lastname)
+            store.setNameUser(res.data.name)
+            store.setLastName(res.data.lastname)
+            router.push('/manage')
+          }
         }
       ).catch(
         err => {
