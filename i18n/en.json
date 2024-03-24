@@ -75,16 +75,16 @@
     "service-8": "Packages"
   },
   "form-service": {
-    "plane": {
+    "fly": {
       "form-1": "dia de vuelo"
     }
   },
-  "customer-plane": {
+  "customer-fly": {
     "add": "Book a flight for the trip",
     "search": "Search for a booked flight",
     "cancel": "Cancel a booked flight"
   },
-  "customer-bed": {
+  "customer-hotel": {
     "add": "Book a night for the trip",
     "search": "Search for a booked night",
     "cancel": "Cancel a booked night"
@@ -99,20 +99,20 @@
     "search": "Search for a booked car",
     "cancel": "Cancel a booked car"
   },
-  "customer-group": {
+  "customer-excursion": {
     "add": "Book a group for the trip",
     "search": "Search for a booked group",
     "cancel": "Cancel a booked group"
   },
-  "customer-ticket": {
+  "customer-event": {
     "add": "Book a ticket for the trip",
     "search": "Search for a booked ticket",
     "cancel": "Cancel a booked ticket"
   },
   "customer-user": {
-    "add": "Book a user for the trip",
-    "search": "Search for a booked user",
-    "cancel": "Cancel a booked user"
+    "add": "Register a new customer",
+    "search": "Search for a customer",
+    "cancel": "Desactivate a customer"
   },
   "customer-bus": {
     "add": "Book a bus for the trip",
@@ -120,12 +120,12 @@
     "cancel": "Cancel a booked bus"
   },
 
-  "service-plane": {
+  "service-fly": {
     "add": "Register a new plane service",
     "search": "Search for a plane service",
     "cancel": "Desactivate a plane service"
   },
-  "service-bed": {
+  "service-hotel": {
     "add": "Register a new night hotel service",
     "search": "Search for a night hotel service",
     "cancel": "Desactivate a night hotel service"
@@ -140,26 +140,31 @@
     "search": "Search for a car service",
     "cancel": "Desactivate a car service"
   },
-  "service-group": {
+  "service-excursion": {
     "add": "Register a new group service",
     "search": "Search for a group service",
     "cancel": "Desactivate a group service"
   },
-  "service-ticket": {
+  "service-event": {
     "add": "Register a new ticket service",
     "search": "Search for a ticket service",
     "cancel": "Desactivate a ticket service"
-  },
-  "service-user": {
-    "add": "Register a new customer",
-    "search": "Search for a customer",
-    "cancel": "Desactivate a customer"
   },
   "service-bus": {
     "add": "Register a new bus service",
     "search": "Search for a bus service",
     "cancel": "Desactivate a bus service"
   },
-  "dashboard": "Dashboard",
-  "services": "Services"
+  "dashboard-page": "Dashboard",
+  "services": "Services",
+  "dashboard": {
+    "description-title": "Write a short description:",
+    "description-placeholder": "The description here",
+    "destination-title": "Write a short destination:",
+    "destination-placeholder": "The destination here",
+    "date-title": "Choose a day:",
+    "cost-title": "Introduce the cost:",
+    "amount-title": "Introduce the amount offer",
+    "available-title": "Choose available"
+  }
 }

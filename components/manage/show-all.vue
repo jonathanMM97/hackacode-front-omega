@@ -1,36 +1,36 @@
 <template>
-  <div class="hk-show-all">
-    <div class="hk-show-all__icon" v-on:click="store.setOption('plane')">
+  <div class="hk-show-all" :data-color="store.getTheme">
+    <div class="hk-show-all__icon" :data-color="store.getTheme" v-on:click="store.setOption('fly')">
       <Plane />
-      <img class="hk-show-all__img" src="@/public/media/icon-active.png" />
+      <img class="hk-show-all__img" :data-color="store.getTheme" src="@/public/media/icon-active.png" />
     </div>
-    <div class="hk-show-all__icon" v-on:click="store.setOption('bed')">
+    <div class="hk-show-all__icon" :data-color="store.getTheme" v-on:click="store.setOption('hotel')">
       <Bed />
-      <img class="hk-show-all__img" src="@/public/media/icon-active.png" />
+      <img class="hk-show-all__img" :data-color="store.getTheme" src="@/public/media/icon-active.png" />
     </div>
-    <div class="hk-show-all__icon" v-on:click="store.setOption('train')">
+    <div class="hk-show-all__icon" :data-color="store.getTheme" v-on:click="store.setOption('train')">
       <Train />
-      <img class="hk-show-all__img" src="@/public/media/icon-active.png" />
+      <img class="hk-show-all__img" :data-color="store.getTheme" src="@/public/media/icon-active.png" />
     </div>
-    <div class="hk-show-all__icon" v-on:click="store.setOption('car')">
+    <div class="hk-show-all__icon" :data-color="store.getTheme" v-on:click="store.setOption('car')">
       <Car />
-      <img class="hk-show-all__img" src="@/public/media/icon-active.png" />
+      <img class="hk-show-all__img" :data-color="store.getTheme" src="@/public/media/icon-active.png" />
     </div>
-    <div class="hk-show-all__icon" v-on:click="store.setOption('group')">
+    <div class="hk-show-all__icon" :data-color="store.getTheme" v-on:click="store.setOption('excursion')">
       <Group />
-      <img class="hk-show-all__img" src="@/public/media/icon-active.png" />
+      <img class="hk-show-all__img" :data-color="store.getTheme" src="@/public/media/icon-active.png" />
     </div>
-    <div class="hk-show-all__icon" v-on:click="store.setOption('ticket')">
+    <div class="hk-show-all__icon" :data-color="store.getTheme" v-on:click="store.setOption('event')">
       <Ticket />
-      <img class="hk-show-all__img" src="@/public/media/icon-active.png" />
+      <img class="hk-show-all__img" :data-color="store.getTheme" src="@/public/media/icon-active.png" />
     </div>
-    <div class="hk-show-all__icon" v-on:click="store.setOption('user')">
+    <div v-if="store.getCurrentPage !== 'services'" :data-color="store.getTheme" class="hk-show-all__icon" v-on:click="store.setOption('user')">
       <User />
-      <img class="hk-show-all__img" src="@/public/media/icon-active.png" />
+      <img class="hk-show-all__img" :data-color="store.getTheme" src="@/public/media/icon-active.png" />
     </div>
-    <div class="hk-show-all__icon" v-on:click="store.setOption('bus')">
+    <div class="hk-show-all__icon" :data-color="store.getTheme" v-on:click="store.setOption('bus')">
       <Bus />
-      <img class="hk-show-all__img" src="@/public/media/icon-active.png" />
+      <img class="hk-show-all__img" :data-color="store.getTheme" src="@/public/media/icon-active.png" />
     </div>
   </div>
 </template>
@@ -59,6 +59,13 @@ const store = useHackacodeStore();
   padding-left: 8rem;
   gap: 10rem;
 
+  &[data-color="light"] {
+    color: $font-color--dark;
+  }
+  &[data-color="dark"] {
+    color: $font-color--light;
+  }
+
   &__icon {
     display: flex;
     cursor: pointer;
@@ -68,7 +75,13 @@ const store = useHackacodeStore();
     width: 60px;
     height: 40px;
     border-radius: rem(10px);
-    box-shadow: 5px 5px 5px rgba($font-color--dark, 0.2);
+    &[data-color="light"] {
+      box-shadow: 5px 5px 5px rgba($font-color--dark, 0.2);
+    }
+    &[data-color="dark"] {
+      box-shadow: 5px 5px 5px rgba($font-color--light, 0.2);
+      
+    }
   }
 
   &__img {

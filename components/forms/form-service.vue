@@ -1,85 +1,65 @@
 <template>
-  <div class="hk-form-service">
-    <div v-if="operation === 'none'" class="hk-form-services__select">
-      <div class="hk-form-services__select-op" v-on:click="getOperation('add')" data-img="add">
-        <div class="hk-form-services__select-text">
-          <h2 v-if="store.getCurrentPage === 'client'">{{ $t('customer-' + store.getOption + ".add") }}</h2>
-          <h2 v-if="store.getCurrentPage === 'services'">{{ $t('service-' + store.getOption + ".add") }}</h2>
-        </div>
-      </div>
-      <div class="hk-form-services__select-op" v-on:click="getOperation('search')" data-img="search">
-        <div class="hk-form-services__select-text">
-          <h2 v-if="store.getCurrentPage === 'client'">{{ $t('customer-' + store.getOption + ".search") }}</h2>
-          <h2 v-if="store.getCurrentPage === 'services'">{{ $t('service-' + store.getOption + ".search") }}</h2>
-        </div>
-      </div>
-      <div class="hk-form-services__select-op" v-on:click="getOperation('cancel')" data-img="cancel">
-        <div class="hk-form-services__select-text">
-          <h2 v-if="store.getCurrentPage === 'client'">{{ $t('customer-' + store.getOption + ".cancel") }}</h2>
-          <h2 v-if="store.getCurrentPage === 'services'">{{ $t('service-' + store.getOption + ".cancel") }}</h2>
-        </div>
-      </div>
+  <div v-if="store.getOperation !== 'none'" class="hk-form-service-accessibility" v-on:click="returnBack" :data-color="store.getTheme">
+    <div class="hk-form-service-accessibility__circle" :data-color="store.getTheme">
+        <Chevron class="hk-form-service-accessibility__svg" />
     </div>
   </div>
+  <DashboardFormOp v-if="store.getOperation !== 'add' && store.getOperation !== 'search' && store.getOperation !== 'cancel'" />
+  <AddService v-if="store.getOperation === 'add' && store.getCurrentPage === 'services'" />
+  <ManageServices v-if="(((store.getOperation === 'search' || store.getOperation === 'cancel') && store.getCurrentPage === 'services') || (store.getOperation !== 'none' && store.getCurrentPage === 'client'))" />
 </template>
 
 <script setup lang="ts">
+import Chevron from '@/public/media/chevron.svg'
 import { useHackacodeStore } from "~/stores/Hackacode";
 
 const store = useHackacodeStore();
-const operation = ref('none')
 
-const getOperation = (value) => {
-  operation.value = value
+const returnBack = () => {
+  store.setOperation('none');
 }
 </script>
 
 <style lang="scss">
-.hk-form-services {
-
-  &__select {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(33.33%, 1fr));
+.hk-form-service-accessibility {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 2px black;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  cursor: pointer;
+  
+  &[data-color="light"] {
+    color: $font-color--dark;
+  }
+  &[data-color="dark"] {
+    color: $font-color--light;
   }
 
-  &__select-op {
-      width: 30rem;
-      height: 44rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      &[data-img="add"] {
-        background: url('/media/add_serv.png');
-        background-size: cover; /* Para cubrir todo el contenedor */
-        background-position: center;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-      }
-      &[data-img="search"] {
-        background: url('/media/search_serv.png');
-        background-size: cover; /* Para cubrir todo el contenedor */
-        background-position: center;
-      }
-      &[data-img="cancel"] {
-        background: url('/media/cancel_serv.png');
-        background-size: cover; /* Para cubrir todo el contenedor */
-        background-position: center;
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-      }
-  }
-  &__select-text {
-    padding-left: 3rem;
-    padding-right: 3rem;
-    text-align: center;
-    h2 {
-      display: inline;
-      font-size: $font-size--large;
-      color: $font-color--light;
-      background-color: rgba($font-color--dark, 0.3);
+  &__circle {
+    width: 40px; /* Tamaño del círculo */
+    height: 40px; /* Tamaño del círculo */
+    border-radius: 50%; /* Hacer que el contenedor sea un círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &[data-color="light"] {
+      border: 2px solid $font-color--dark;
     }
+    &[data-color="dark"] {
+      border: 2px solid $font-color--light;
+    }
+  }
+  
+  p {
+    font-size: $font-size--medium;
+  }
+  
+  &__svg {
+    rotate: 90deg;
   }
 }
 

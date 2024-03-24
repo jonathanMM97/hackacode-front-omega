@@ -2,67 +2,68 @@
   <div class="hk-sidebar">
     <div
       class="hk-sidebar__menu-icon hk-all"
-      v-on:click="store.setOption('all')"
+      v-on:click="selectOption('all')"
       :data-color="store.getOption"
     >
       <ViewAll />
     </div>
     <div
       class="hk-sidebar__menu-icon hk-plane"
-      v-on:click="store.setOption('plane')"
+      v-on:click="selectOption('fly')"
       :data-color="store.getOption"
     >
       <Plane />
     </div>
     <div
       class="hk-sidebar__menu-icon hk-bed"
-      v-on:click="store.setOption('bed')"
+      v-on:click="selectOption('hotel')"
       :data-color="store.getOption"
     >
       <Bed />
     </div>
     <div
       class="hk-sidebar__menu-icon hk-train"
-      v-on:click="store.setOption('train')"
+      v-on:click="selectOption('train')"
       :data-color="store.getOption"
     >
       <Train />
     </div>
     <div
       class="hk-sidebar__menu-icon hk-car"
-      v-on:click="store.setOption('car')"
+      v-on:click="selectOption('car')"
       :data-color="store.getOption"
     >
       <Car />
     </div>
     <div
       class="hk-sidebar__menu-icon hk-group"
-      v-on:click="store.setOption('group')"
+      v-on:click="selectOption('excursion')"
       :data-color="store.getOption"
     >
       <Group />
     </div>
     <div
       class="hk-sidebar__menu-icon hk-ticket"
-      v-on:click="store.setOption('ticket')"
+      v-on:click="selectOption('event')"
       :data-color="store.getOption"
     >
       <Ticket />
     </div>
     <div
-      class="hk-sidebar__menu-icon hk-user"
-      v-on:click="store.setOption('user')"
-      :data-color="store.getOption"
+    class="hk-sidebar__menu-icon hk-bus"
+    v-on:click="selectOption('bus')"
+    :data-color="store.getOption"
     >
-      <User />
-    </div>
-    <div
-      class="hk-sidebar__menu-icon hk-bus"
-      v-on:click="store.setOption('bus')"
-      :data-color="store.getOption"
-    >
-      <Bus />
-    </div>
+    <Bus />
+  </div>
+  <div
+    v-if="store.getCurrentPage !== 'services'"
+    class="hk-sidebar__menu-icon hk-user"
+    v-on:click="selectOption('user')"
+    :data-color="store.getOption"
+  >
+    <User />
+  </div>
   </div>
 </template>
 
@@ -79,6 +80,12 @@ import Bus from "@/public/media/icon-bus.svg";
 import { useHackacodeStore } from "~/stores/Hackacode";
 
 const store = useHackacodeStore();
+
+const selectOption = (value) => {
+  store.setOption(value)
+  store.setOperation('none')
+  console.log((store.getOption as String).toUpperCase())
+}
 </script>
 
 <style lang="scss">
@@ -102,10 +109,10 @@ const store = useHackacodeStore();
 .hk-all[data-color="all"] {
   background-color: $font-color--blue;
 }
-.hk-plane[data-color="plane"] {
+.hk-plane[data-color="fly"] {
   background-color: $font-color--blue;
 }
-.hk-bed[data-color="bed"] {
+.hk-bed[data-color="hotel"] {
   background-color: $font-color--blue;
 }
 .hk-train[data-color="train"] {
@@ -114,10 +121,10 @@ const store = useHackacodeStore();
 .hk-car[data-color="car"] {
   background-color: $font-color--blue;
 }
-.hk-group[data-color="group"] {
+.hk-group[data-color="excursion"] {
   background-color: $font-color--blue;
 }
-.hk-ticket[data-color="ticket"] {
+.hk-ticket[data-color="event"] {
   background-color: $font-color--blue;
 }
 .hk-user[data-color="user"] {

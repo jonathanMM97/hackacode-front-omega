@@ -60,7 +60,7 @@
     "button": "Enviar"
   },
   "manage": {
-    "welcome": "Bienvenido de nuevo, ",
+    "welcome": "Bienvenid{'@'} de nuevo, ",
     "message-1": "Muchas gracias por tu esfuerzo y dedicación. Estamos encantados de tenerte en el equipo.",
     "message-2": "¡Eres genial!",
     "operations": "¿Qué operación realizará?",
@@ -74,12 +74,12 @@
     "service-7": "Entradas a Eventos",
     "service-8": "Paquetes"
   },
-  "customer-plane": {
+  "customer-fly": {
     "add": "Reservar un vuelo para el viaje",
     "search": "Buscar una reserva de vuelo",
     "cancel": "Cancelar una reserva de vuelo"
   },
-  "customer-bed": {
+  "customer-hotel": {
     "add": "Reservar una habitacion para el viaje",
     "search": "Buscar una reserva de habitacion",
     "cancel": "Cancelar una reserva de habitacion"
@@ -94,32 +94,32 @@
     "search": "Buscar una reserva de coche",
     "cancel": "Cancelar una reserva de coche"
   },
-  "customer-group": {
+  "customer-excursion": {
     "add": "Reservar un grupo para el viaje",
     "search": "Buscar una reserva de grupo",
     "cancel": "Cancelar una reserva de grupo"
   },
-  "customer-ticket": {
+  "customer-event": {
     "add": "Reservar un evento para el viaje",
     "search": "Buscar una reserva de evento",
     "cancel": "Cancelar una reserva de evento"
   },
   "customer-user": {
-    "add": "Reservar un usuario para el viaje",
-    "search": "Buscar una reserva de usuario",
-    "cancel": "Cancelar una reserva de usuario"
+    "add": "Añadir un nuevo cliente",
+    "search": "Buscar un cliente",
+    "cancel": "Desactivar un cliente"
   },
   "customer-bus": {
     "add": "Reservar un bus para el viaje",
     "search": "Buscar una reserva de bus",
     "cancel": "Cancelar una reserva de bus"
   },
-  "service-plane": {
+  "service-fly": {
     "add": "Añadir un nuevo servicio de vuelo",
     "search": "Buscar un servicio de vuelo",
     "cancel": "Cancelar un servicio de vuelo"
   },
-  "service-bed": {
+  "service-hotel": {
     "add": "Añadir un nuevo servicio de hotel",
     "search": "Buscar un servicio de hotel",
     "cancel": "Cancelar un servicio de hotel"
@@ -134,26 +134,31 @@
     "search": "Buscar un servicio de taxi",
     "cancel": "Cancelar un servicio de taxi"
   },
-  "service-group": {
+  "service-excursion": {
     "add": "Añadir un nuevo servicio de grupo",
     "search": "Buscar un servicio de grupo",
     "cancel": "Cancelar un servicio de grupo"
   },
-  "service-ticket": {
+  "service-event": {
     "add": "Añadir un nuevo servicio de evento",
     "search": "Buscar un servicio de evento",
     "cancel": "Cancelar un servicio de evento"
-  },
-  "service-user": {
-    "add": "Añadir un nuevo cliente",
-    "search": "Buscar un cliente",
-    "cancel": "Desactivar un cliente"
   },
   "service-bus": {
     "add": "Añadir un nuevo servicio de autobús",
     "search": "Buscar un servicio de autobús",
     "cancel": "Cancelar un servicio de autobús"
   },
-  "dashboard": "Menu",
-  "services": "Servicios"
+  "dashboard-page": "Menu",
+  "services": "Servicios",
+  "dashboard": {
+    "description-title": "Introduce una breve descripción:",
+    "description-placeholder": "La descripción aquí",
+    "destination-title": "Escribe el destino:",
+    "destination-placeholder": "El destino aquí",
+    "date-title": "Elige el día:",
+    "cost-title": "Introduce the cost:",
+    "amount-title": "Introduce la cantidad ofertada",
+    "available-title": "Elige la disponibilidad"
+  }
 }
