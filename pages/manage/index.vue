@@ -13,3 +13,10 @@ onMounted(() => {
   }
 })
 </script>
+
+
+<style lang="scss">
+.hk-footer {
+  display: none;
+}
+</style>

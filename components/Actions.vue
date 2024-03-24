@@ -72,6 +72,8 @@ const logOut = () => {
   router.push('/')
 }
 
+const redirectPage = i18n.locale.value === 'es' ? '/es/manage' : '/manage';
+
 const getDataUser = async () =>{
     await axios.get('http://vps-3991861-x.dattaweb.com:8080/api/employee/getByUsername/' + store.getUser, {
       headers: {
@@ -83,7 +85,7 @@ const getDataUser = async () =>{
               allow.value = true
               store.setNameUser(res.data.name)
               store.setLastName(res.data.lastname)
-              router.push('/manage')
+              router.push(i18n.locale.value === 'es' ? '/es/manage' : '/manage')
           }
         ).catch(
           err => {
