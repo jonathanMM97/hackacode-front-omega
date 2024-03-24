@@ -6,7 +6,9 @@
     <div class="hk-banner__righ-side">
       <div class="hk-banner__semi-circle-1" :data-color="store.getTheme"></div>
       <div class="hk-banner__semi-circle-2" :data-color="store.getTheme"></div>
-      <button class="hk-banner__button">Pruébalo ya</button>
+      <NuxtLink class="hk-banner__button" to="/contact-us">
+        <ButtonBlue>Pruébalo ya</ButtonBlue>
+      </NuxtLink>
     </div>
   </main>
 </template>
@@ -76,6 +78,7 @@ const store = useHackacodeStore();
 
   &__button {
     position: absolute;
+    text-decoration: none;
     transform: translateX(rem(500px)) translateY(rem(97px));
     z-index: 2;
   }

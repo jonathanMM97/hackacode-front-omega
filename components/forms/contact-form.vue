@@ -32,7 +32,9 @@
         @onChange="changeMessage"
       />
     </div>
-    <button class="hk-contact-form__button" type="submit">Submit</button>
+    <button class="hk-contact-form__button" type="submit">
+      <ButtonBlue>Submit</ButtonBlue>
+    </button>
   </form>
 </template>
 

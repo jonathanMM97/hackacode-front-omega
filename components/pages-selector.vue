@@ -23,11 +23,14 @@
       ><p>{{ $t("customers") }}</p></NuxtLink
     >
 
+    <div v-if="store.getShowUserLogin" class="hk-selector__content-main" v-on:click="showSideBar('main')" :data-page="store.getCurrentPage">
+      <p>{{ $t('dashboard') }}</p>
+    </div>
     <div v-if="store.getShowUserLogin" class="hk-selector__content-client" v-on:click="showSideBar('client')" :data-page="store.getCurrentPage">
-      <p>Clients</p>
+      <p>{{ $t('customers') }}</p>
     </div>
     <div v-if="store.getShowUserLogin" class="hk-selector__content-services" v-on:click="showSideBar('services')" :data-page="store.getCurrentPage">
-      <p>Services</p>
+      <p>{{ $t('services') }}</p>
     </div>
   </div>
 </template>
@@ -39,10 +42,13 @@ const store = useHackacodeStore();
 const i18n = useI18n();
 
 const showSideBar = (page): void => {
-  if (!store.getShowSidebar) {
+  if (page !== 'main') {
     store.setShowSidebar(true)
+  } else {
+    store.setShowSidebar(false)
   }
   store.setCurrentPage(page)
+  store.setOption('main')
 }
 </script>
 
@@ -53,7 +59,7 @@ const showSideBar = (page): void => {
     display: flex;
     font-family: $font-main;
     font-size: $font-size--small;
-    width: rem(200px);
+    width: rem(400px);
     justify-content: space-between;
     gap: rem(20px);
   }
@@ -81,9 +87,13 @@ const showSideBar = (page): void => {
   &__content-services[data-page="services"] {
     font-weight: $font-weight--bold;
   }
+  &__content-main[data-page="main"] {
+    font-weight: $font-weight--bold;
+  }
 
   &__content-client,
-  &__content-services {
+  &__content-services,
+  &__content-main {
     cursor: pointer;
   }
 }

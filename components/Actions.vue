@@ -56,43 +56,47 @@ const i18n = useI18n();
 const allow = ref(false)
 
 watch(store, () => {
-  getDataUser()
+  if(store.getShowUserLogin) {
+    getDataUser()
+  }
 })
 
 const logOut = () => {
+  allow.value = false
   store.setToken('none');
   store.setUser('none');
+  store.setShowUserLogin(false);
+  store.setShowSidebar(false);
+  store.setNameUser('none')
+  store.setLastName('none')
+  router.push('/')
 }
 
 const getDataUser = async () =>{
-  await axios.get('http://vps-3991861-x.dattaweb.com:8080/api/employee/getByUsername/' + store.getUser, {
-    headers: {
-      Authorization: 'Bearer ' + store.getToken
-    }
-  })
-      .then(
-        res => {
-          if (!allow.value) {
-
-            allow.value = true;
-            store.setNameUser(res.data.name)
-            store.setLastName(res.data.lastname)
-            router.push('/manage')
+    await axios.get('http://vps-3991861-x.dattaweb.com:8080/api/employee/getByUsername/' + store.getUser, {
+      headers: {
+        Authorization: 'Bearer ' + store.getToken
+      }
+    })
+        .then(
+          res => {
+              allow.value = true
+              store.setNameUser(res.data.name)
+              store.setLastName(res.data.lastname)
+              router.push('/manage')
           }
-        }
-      ).catch(
-        err => {
-          if (allow.value) {
-            allow.value = false;
-            store.setNameUser('none')
-            store.setLastName('none')
-            store.setToken('none')
-            store.setUser('none')
-            store.setShowUserLogin(false)
-            router.push('/')
+        ).catch(
+          err => {
+              allow.value = false
+              store.setNameUser('none')
+              store.setLastName('none')
+              store.setToken('none')
+              store.setUser('none')
+              store.setShowUserLogin(false)
+              router.push('/')
           }
-        }
-      )
+        )
+  
 }
 
 onMounted(() => {
