@@ -17,8 +17,7 @@ import { useHackacodeStore } from "~/stores/Hackacode";
 const store = useHackacodeStore();
 
 onMounted(() => {
-  store.setShowUserLogin(true)
-  store.setShowSidebar(false)
+  store.setCurrentPage('main')
 })
 </script>
 

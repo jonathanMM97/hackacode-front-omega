@@ -159,5 +159,7 @@
     "add": "Register a new bus service",
     "search": "Search for a bus service",
     "cancel": "Desactivate a bus service"
-  }
+  },
+  "dashboard": "Dashboard",
+  "services": "Services"
 }

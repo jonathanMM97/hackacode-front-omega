@@ -22,7 +22,9 @@
         @onChange="changePass"
       />
     </div>
-    <button class="hk-contact-form__button" type="submit">Submit</button>
+    <button class="hk-contact-form__button" type="submit">
+      <ButtonBlue>Submit</ButtonBlue>
+    </button>
   </form>
 </template>
 
@@ -37,9 +39,18 @@ const state = reactive({
   pass: "",
 });
 const validateForm = async () => {
-  const auth = await axios.post('http://vps-3991861-x.dattaweb.com:8080/api/employee/login', {"username": state.user, "password": state.pass})
-  store.setToken(auth.data.token)
-  store.setUser(state.user)
+  await axios.post('http://vps-3991861-x.dattaweb.com:8080/api/employee/login', {"username": state.user, "password": state.pass})
+  .then(
+          res => {
+            store.setShowUserLogin(true)
+            store.setToken(res.data.token)
+            store.setUser(state.user)
+          }
+        ).catch(
+          err => {
+            store.setShowUserLogin(false)
+          }
+        )
 };
 
 const changePass = (value: string) => {
@@ -74,6 +85,9 @@ const changeEmail = (value: string) => {
 
   &__button {
     margin-bottom: 4rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
   }
 }
 </style>

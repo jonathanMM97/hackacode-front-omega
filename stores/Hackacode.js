@@ -11,6 +11,7 @@ export const useHackacodeStore = defineStore("hackacode", {
     showUserLogin: ref(false),
     showSidebar: ref(false),
     currentPage: ref('main'),
+    user_rol: ref('none'),
   }),
   persist: true,
   getters: {
@@ -40,15 +41,19 @@ export const useHackacodeStore = defineStore("hackacode", {
     },
     getShowUserLogin() {
       this.showUserLogin = JSON.parse(window.localStorage.getItem("currentShowUserLogin"))
-      return this.showUserLogin === null ? 'none' : this.showUserLogin
+      return this.showUserLogin === null ? false : this.showUserLogin
     },
     getShowSidebar() {
       this.showUserLogin = JSON.parse(window.localStorage.getItem("currentShowSidebar"))
-      return this.showSidebar === null ? 'none' : this.showSidebar
+      return this.showSidebar === null ? false : this.showSidebar
     },
     getCurrentPage() {
       this.currentPage = JSON.parse(window.localStorage.getItem("currentPage"))
       return this.currentPage === null ? 'main' : this.currentPage
+    },
+    getUserRol() {
+      this.user_rol = JSON.parse(window.localStorage.getItem("userRol"))
+      return this.user_rol === null ? 'none' : this.user_rol
     },
   },
   actions: {
@@ -92,6 +97,10 @@ export const useHackacodeStore = defineStore("hackacode", {
     setCurrentPage(currentPage) {
       window.localStorage.setItem("currentPage", JSON.stringify(currentPage))
       this.currentPage = currentPage
+    },
+    setUserRol(userRol) {
+      window.localStorage.setItem("userRol", JSON.stringify(userRol))
+      this.user_rol = userRol
     },
   },
 });

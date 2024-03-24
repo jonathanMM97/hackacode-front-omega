@@ -7,6 +7,6 @@ import { useHackacodeStore } from "~/stores/Hackacode";
 
 const store = useHackacodeStore();
 onMounted(() => {
-  store.setCurrentPage('main')
+  store.setCurrentPage('about')
 })
 </script>

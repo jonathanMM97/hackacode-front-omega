@@ -153,5 +153,7 @@
     "add": "Añadir un nuevo servicio de autobús",
     "search": "Buscar un servicio de autobús",
     "cancel": "Cancelar un servicio de autobús"
-  }
+  },
+  "dashboard": "Menu",
+  "services": "Servicios"
 }
