@@ -5,8 +5,9 @@
     </div>
   </div>
   <DashboardFormOp v-if="store.getOperation !== 'add' && store.getOperation !== 'search' && store.getOperation !== 'cancel'" />
-  <AddService v-if="store.getOperation === 'add' && store.getCurrentPage === 'services'" />
-  <ManageServices v-if="(((store.getOperation === 'search' || store.getOperation === 'cancel') && store.getCurrentPage === 'services') || (store.getOperation !== 'none' && store.getCurrentPage === 'client'))" />
+  <AddService v-if="(store.getOperation !== 'search' && store.getOperation !== 'cancel') && store.getCurrentPage === 'services'" />
+  <AddCustomer v-if="(store.getOperation !== 'search' && store.getOperation !== 'cancel') && store.getCurrentPage === 'client' && store.getOption === 'user'" />
+  <ManageServices v-if="store.getOperation !== 'add' || (store.getOperation === 'add' && store.getCurrentPage == 'client' && store.getOption !== 'user')" />
 </template>
 
 <script setup lang="ts">

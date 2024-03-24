@@ -13,6 +13,7 @@ export const useHackacodeStore = defineStore("hackacode", {
     currentPage: ref('main'),
     user_rol: ref('none'),
     operation: ref('none'),
+    service: ref(null),
   }),
   persist: true,
   getters: {
@@ -59,6 +60,10 @@ export const useHackacodeStore = defineStore("hackacode", {
     getOperation() {
       this.operation = JSON.parse(window.localStorage.getItem("currentOperation"))
       return this.operation === null ? 'none' : this.operation
+    },
+    getService() {
+      this.service = JSON.parse(window.localStorage.getItem("currentService"))
+      return this.service === null ? null : this.service
     },
   },
   actions: {
@@ -113,6 +118,10 @@ export const useHackacodeStore = defineStore("hackacode", {
     setOperation(operation) {
       window.localStorage.setItem("currentOperation", JSON.stringify(operation))
       this.operation = operation
+    },
+    setIdService(id) {
+      window.localStorage.setItem("currentService", JSON.stringify(id))
+      this.service = id
     },
   },
 });
