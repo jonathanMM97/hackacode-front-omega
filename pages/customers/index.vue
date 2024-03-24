@@ -5,4 +5,11 @@
   </Banner>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useHackacodeStore } from "~/stores/Hackacode";
+
+const store = useHackacodeStore();
+onMounted(() => {
+  store.setCurrentPage('customer')
+})
+</script>

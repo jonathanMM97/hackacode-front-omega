@@ -14,13 +14,21 @@
     </div>
 
     <NuxtLink
+      v-if="!allow"
       class="hk-actions__login"
       :to="
         (i18n.locale.value === 'es' ? '/' + i18n.locale.value : '') + '/login'
       "
       :data-color="store.getTheme"
-      ><p>{{ $t("log-in") }}</p></NuxtLink
-    >
+      >
+      
+      <p>{{ $t("log-in") }}</p>
+      
+    </NuxtLink>
+
+    <div v-else class="hk-actions__login-in" v-on:click="logOut">
+      <img class="hk-actions__profile" src="@/public/media/foto-perfil.png" />
+    </div>
 
     <NuxtLink
       class="hk-message-icon"
@@ -39,11 +47,62 @@
 import Sun from "@/public/media/sun-svgrepo-com.svg";
 import Moon from "@/public/media/moon.svg";
 import Message from "@/public/media/message-icon.svg";
-
 import { useHackacodeStore } from "~/stores/Hackacode";
+import axios from 'axios'
 
+const router = useRouter()
 const store = useHackacodeStore();
 const i18n = useI18n();
+const allow = ref(false)
+
+watch(store, () => {
+  if(store.getShowUserLogin) {
+    getDataUser()
+  }
+})
+
+const logOut = () => {
+  allow.value = false
+  store.setToken('none');
+  store.setUser('none');
+  store.setShowUserLogin(false);
+  store.setShowSidebar(false);
+  store.setNameUser('none')
+  store.setLastName('none')
+  router.push('/')
+}
+
+const getDataUser = async () =>{
+    await axios.get('http://vps-3991861-x.dattaweb.com:8080/api/employee/getByUsername/' + store.getUser, {
+      headers: {
+        Authorization: 'Bearer ' + store.getToken
+      }
+    })
+        .then(
+          res => {
+              allow.value = true
+              store.setNameUser(res.data.name)
+              store.setLastName(res.data.lastname)
+              router.push('/manage')
+          }
+        ).catch(
+          err => {
+              allow.value = false
+              store.setNameUser('none')
+              store.setLastName('none')
+              store.setToken('none')
+              store.setUser('none')
+              store.setShowUserLogin(false)
+              router.push('/')
+          }
+        )
+  
+}
+
+onMounted(() => {
+  getDataUser()
+})
+
 </script>
 
 <style lang="scss">
@@ -60,6 +119,11 @@ const i18n = useI18n();
   font-family: $font-main;
   gap: rem(20px);
 
+  &__login-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &__login {
     text-decoration: none;
     font-weight: $font-weight--bold;
@@ -124,5 +188,11 @@ const i18n = useI18n();
   &[data-color="dark"] {
     color: $font-color--light;
   }
+}
+
+.hk-actions__profile {
+  border-radius: rem(20px);
+  width: rem(60px);
+  cursor: pointer;
 }
 </style>

@@ -145,13 +145,15 @@
     "cancel": "Cancelar un servicio de evento"
   },
   "service-user": {
-    "add": "Añadir un nuevo servicio de vuelo",
-    "search": "Buscar un servicio de vuelo",
-    "cancel": "Cancelar un servicio de vuelo"
+    "add": "Añadir un nuevo cliente",
+    "search": "Buscar un cliente",
+    "cancel": "Desactivar un cliente"
   },
   "service-bus": {
     "add": "Añadir un nuevo servicio de autobús",
     "search": "Buscar un servicio de autobús",
     "cancel": "Cancelar un servicio de autobús"
-  }
+  },
+  "dashboard": "Menu",
+  "services": "Servicios"
 }

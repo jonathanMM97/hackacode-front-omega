@@ -5,7 +5,11 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useHackacodeStore } from "~/stores/Hackacode";
+
+const store = useHackacodeStore();
+</script>
 
 <style lang="scss">
 .hk-main-view {

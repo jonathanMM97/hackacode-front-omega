@@ -118,5 +118,48 @@
     "add": "Book a bus for the trip",
     "search": "Search for a booked bus",
     "cancel": "Cancel a booked bus"
-  }
+  },
+
+  "service-plane": {
+    "add": "Register a new plane service",
+    "search": "Search for a plane service",
+    "cancel": "Desactivate a plane service"
+  },
+  "service-bed": {
+    "add": "Register a new night hotel service",
+    "search": "Search for a night hotel service",
+    "cancel": "Desactivate a night hotel service"
+  },
+  "service-train": {
+    "add": "Register a new train service",
+    "search": "Search for a train service",
+    "cancel": "Desactivate a train service"
+  },
+  "service-car": {
+    "add": "Register a new car service",
+    "search": "Search for a car service",
+    "cancel": "Desactivate a car service"
+  },
+  "service-group": {
+    "add": "Register a new group service",
+    "search": "Search for a group service",
+    "cancel": "Desactivate a group service"
+  },
+  "service-ticket": {
+    "add": "Register a new ticket service",
+    "search": "Search for a ticket service",
+    "cancel": "Desactivate a ticket service"
+  },
+  "service-user": {
+    "add": "Register a new customer",
+    "search": "Search for a customer",
+    "cancel": "Desactivate a customer"
+  },
+  "service-bus": {
+    "add": "Register a new bus service",
+    "search": "Search for a bus service",
+    "cancel": "Desactivate a bus service"
+  },
+  "dashboard": "Dashboard",
+  "services": "Services"
 }

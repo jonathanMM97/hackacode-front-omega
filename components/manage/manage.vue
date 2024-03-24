@@ -1,16 +1,25 @@
 <template>
   <main class="hk-manage">
-    <h2>{{ $t("manage.welcome") }}</h2>
+    <h2 :data-color="store.getTheme">{{ $t("manage.welcome") }} {{ store.getNameUser }}</h2>
     <div class="hk-manage__menu">
-      <Sidebar />
-      <div class="hk-manage__menu-selected">
+      <Sidebar v-if="store.getShowSidebar"/>
+      <div class="hk-manage__menu-empty"></div>
+      <div class="hk-manage__menu-selected" :data-color="store.getTheme">
         <SelectOption />
       </div>
     </div>
   </main>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useHackacodeStore } from "~/stores/Hackacode";
+
+const store = useHackacodeStore();
+
+onMounted(() => {
+  store.setCurrentPage('main')
+})
+</script>
 
 <style lang="scss">
 .hk-manage {
@@ -19,7 +28,12 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 6rem;
+  color: $font-color--dark;
   font-family: $font-main;
+
+  h2[data-color="dark"]{
+    color: $font-color--light;
+  }
 
   &__menu {
     width: 100%;
@@ -40,9 +54,21 @@
     height: 44rem;
     left: 15rem;
     top: 12rem;
-    box-shadow: 10px 10px 10px rgba($font-color--dark, 0.2);
     border-radius: rem(20px);
-    background-color: $font-color--light;
+    
+    &[data-color="light"] {
+      background-color: $font-color--light;
+      box-shadow: 10px 10px 10px rgba($font-color--dark, 0.2);
+    }
+    &[data-color="dark"] {
+      background-color: $font-color--dark;
+      color: $font-color--light;
+      box-shadow: 10px 10px 10px rgba($font-color--light, 0.2);
+    }
+  }
+
+  &__menu-empty {
+    padding-bottom: 38rem;
   }
 }
 </style>
