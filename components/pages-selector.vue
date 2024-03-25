@@ -70,9 +70,9 @@ const showSideBar = (page: string): void => {
     font-family: $font-main;
     font-size: $font-size--small;
     font-weight: 100;
-    width: rem(700px);
+    width: rem(200px);
     justify-content: space-between;
-    gap: rem(40px);
+    gap: rem(20px);
   }
 
   &__content-about,

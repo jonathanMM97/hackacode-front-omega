@@ -14,6 +14,9 @@ export const useHackacodeStore = defineStore("hackacode", {
     user_rol: ref('none'),
     operation: ref('none'),
     service: ref(null),
+    shop: ref(null),
+    customer: ref(null),
+    showShoppingCart: ref(false),
   }),
   persist: true,
   getters: {
@@ -64,6 +67,18 @@ export const useHackacodeStore = defineStore("hackacode", {
     getService() {
       this.service = JSON.parse(window.localStorage.getItem("currentService"))
       return this.service === null ? null : this.service
+    },
+    getShop() {
+      this.shop = JSON.parse(window.localStorage.getItem("currentShop"))
+      return this.shop === null ? null : this.shop
+    },
+    getCustomer() {
+      this.customer = JSON.parse(window.localStorage.getItem("currentCustomer"))
+      return this.customer === null ? null : this.customer
+    },
+    getShowShoppingCart() {
+      this.showShoppingCart = JSON.parse(window.localStorage.getItem("currentShowShoppingCart"))
+      return this.showShoppingCart === null ? false : this.showShoppingCart
     },
   },
   actions: {
@@ -122,6 +137,18 @@ export const useHackacodeStore = defineStore("hackacode", {
     setIdService(id) {
       window.localStorage.setItem("currentService", JSON.stringify(id))
       this.service = id
+    },
+    setShop(shop) {
+      window.localStorage.setItem("currentShop", JSON.stringify(shop))
+      this.shop = shop
+    },
+    setCustomer(customer) {
+      window.localStorage.setItem("currentCustomer", JSON.stringify(customer))
+      this.customer = customer
+    },
+    setShowShoppingCart(showShoppingCart) {
+      window.localStorage.setItem("currentShowShoppingCart", JSON.stringify(showShoppingCart))
+      this.showShoppingCart = showShoppingCart
     },
   },
 });

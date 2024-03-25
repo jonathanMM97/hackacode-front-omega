@@ -100,35 +100,37 @@ const validateForm = async () => {
         }
       })
     } else {
-      if (state.name === "") {
+      if (state.name.length === 0) {
         state.name = store.getService.description
       }
-      if (state.lastName === "") {
+      if (state.lastName.length === 0) {
         state.lastName = store.getService.destination
       }
-      if (state.dni === "") {
+      if (state.dni.length === 0) {
         state.dni = store.getService.serviceDate
       }
-      if (state.birthday === "") {
+      if (state.birthday.length === 0) {
         state.birthday = store.getService.description
       }
-      if (state.nacionality === "") {
+      if (state.nacionality.length === 0) {
         state.nacionality = store.getService.destination
       }
-      if (state.phoneNumber === "") {
+      if (state.phoneNumber.length === 0) {
         state.phoneNumber = store.getService.serviceDate
       }
-      if (state.email === "") {
+      if (state.email.length === 0) {
         state.email = store.getService.description
       }
-    await axios.put('http://vps-3991861-x.dattaweb.com:8080/api/client/modify/' + store.getService.id, {"name": state.name, "lastName": state.lastName, "dni": state.dni, "birthDay": state.birthday, "nationality": state.nacionality, "phoneNumber": state.phoneNumber, "email": state.email, "flag": state.available}, {
+     const res = await axios.put('http://vps-3991861-x.dattaweb.com:8080/api/client/modify', {"id": store.getService.id, "name": state.name, "lastName": state.lastName, "dni": state.dni, "birthDay": state.birthday, "nationality": state.nacionality, "phoneNumber": state.phoneNumber, "email": state.email, "flag": state.available}, {
         headers: {
           Authorization: 'Bearer ' + store.getToken
         }
       })
+      console.log(res)
 
   }
-    store.setOperation('search')
+  store.setOperation('none');
+  store.setOption('main')
   isLoading.value = false
 };
 
