@@ -37,8 +37,11 @@
 import axios from "axios";
 import { object, string } from "yup";
 import { useHackacodeStore } from "~/stores/Hackacode";
-
+const i18n = useI18n();
+const router = useRouter()
 const store = useHackacodeStore();
+const isLogin = store.getShowUserLogin ? '/manage' : '/';
+const redirectPage = i18n.locale.value === 'es' ? isLogin + i18n.locale.value : isLogin;
 const isLoading = ref(false);
 
 const test = ref(false);
@@ -87,8 +90,10 @@ const validateForm = async () => {
       })
 
   }
-    store.setOperation('search')
+  store.setOperation('none');
+  store.setOption('main')
   isLoading.value = false
+  router.push(redirectPage)
 };
 
 const changeName = (value: string) => {
@@ -106,7 +111,7 @@ const changeCost = (value: string) => {
 const changeAmount = (value: string) => {
   state.amount = parseInt(value);
 };
-const changeAvailable = (value: string) => {
+const changeAvailable = (value: boolean) => {
   state.available = value;
 };
 </script>

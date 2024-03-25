@@ -1,7 +1,8 @@
 <template>
   <div class="hk-sales" :data-color="store.getTheme">
     <h4>{{ $t("sales") }} per {{ type_ }}</h4>
-    <p>{{ response }}</p>
+    <p>Amount of sales {{ response.substring(0, 1) }}</p>
+    <p>Amount of money {{ response.substring(1) }}</p>
     <ButtonBlue class="hk-sales__button" v-on:click="getResponse(type_ === 'month' ? 'day' : 'month')">Show {{ type_ === 'month' ? 'daily' : 'monthly' }} sales</ButtonBlue>
   </div>
 
@@ -29,6 +30,7 @@ const getResponse = async (type: string) => {
         },
       },
     );
+    console.log(res)
   
     response.value = res.data
   } else {
