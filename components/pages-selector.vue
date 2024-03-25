@@ -32,6 +32,9 @@
     <div v-if="store.getShowUserLogin" class="hk-selector__content-services" v-on:click="showSideBar('services')" :data-page="store.getCurrentPage">
       <p>{{ $t('services') }}</p>
     </div>
+    <div v-if="store.getShowUserLogin" class="hk-selector__content-sales" v-on:click="showSideBar('sales')" :data-page="store.getCurrentPage">
+      <p>{{ $t('sales') }}</p>
+    </div>
   </div>
 </template>
 
@@ -41,12 +44,17 @@ import { useHackacodeStore } from "~/stores/Hackacode";
 const store = useHackacodeStore();
 const i18n = useI18n();
 
-const showSideBar = (page): void => {
+const showSideBar = (page: string): void => {
   if (page !== 'main') {
     store.setShowSidebar(true)
   } else {
     store.setShowSidebar(false)
     store.setOption('main')
+  }
+  if (page === 'sales') {
+    console.log(page)
+    store.setShowSidebar(false)
+    store.setOption('sales')
   }
   store.setCurrentPage(page)
   store.setOption('main')
@@ -61,7 +69,8 @@ const showSideBar = (page): void => {
     display: flex;
     font-family: $font-main;
     font-size: $font-size--small;
-    width: rem(400px);
+    font-weight: 100;
+    width: rem(200px);
     justify-content: space-between;
     gap: rem(20px);
   }
@@ -79,23 +88,33 @@ const showSideBar = (page): void => {
 
   &__content-about[data-page="about"] {
     font-weight: $font-weight--bold;
+    color: $font-color--blue
   }
   &__content-customer[data-page="customer"] {
     font-weight: $font-weight--bold;
+    color: $font-color--blue
   }
   &__content-client[data-page="client"] {
     font-weight: $font-weight--bold;
+    color: $font-color--blue
   }
   &__content-services[data-page="services"] {
     font-weight: $font-weight--bold;
+    color: $font-color--blue
   }
   &__content-main[data-page="main"] {
     font-weight: $font-weight--bold;
+    color: $font-color--blue
+  }
+  &__content-sales[data-page="sales"] {
+    font-weight: $font-weight--bold;
+    color: $font-color--blue
   }
 
   &__content-client,
   &__content-services,
-  &__content-main {
+  &__content-main,
+  &__content-sales {
     cursor: pointer;
   }
 }

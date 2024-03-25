@@ -4,9 +4,10 @@
         <Chevron class="hk-form-service-accessibility__svg" />
     </div>
   </div>
-  <DashboardFormOp v-if="store.getOperation !== 'add' && store.getOperation !== 'search' && store.getOperation !== 'cancel'" />
-  <AddService v-if="store.getOperation === 'add' && store.getCurrentPage === 'services'" />
-  <ManageServices v-if="(((store.getOperation === 'search' || store.getOperation === 'cancel') && store.getCurrentPage === 'services') || (store.getOperation !== 'none' && store.getCurrentPage === 'client'))" />
+  <DashboardFormOp v-if="store.getOperation === 'none' && (store.getOperation !== 'add' && store.getOperation !== 'search' && store.getOperation !== 'cancel')" />
+  <AddService v-if="store.getOperation === 'add' && ((store.getOperation !== 'search' && store.getOperation !== 'cancel') && store.getCurrentPage === 'services')" />
+  <AddCustomer v-if="store.getOperation === 'add' && ((store.getOperation !== 'search' && store.getOperation !== 'cancel') && store.getCurrentPage === 'client' && store.getOption === 'user')" />
+  <ManageServices v-if="(store.getOperation === 'search' || store.getOperation === 'add' || store.getOperation === 'cancel') && (store.getOperation !== 'add' || (store.getOperation === 'add' && store.getCurrentPage == 'client' && store.getOption !== 'user'))" />
 </template>
 
 <script setup lang="ts">

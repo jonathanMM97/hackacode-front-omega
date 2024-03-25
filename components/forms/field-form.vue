@@ -2,7 +2,6 @@
   <div class="hk-field-form">
     <LabelForm :id="id">{{ messageLabel }}</LabelForm>
     <input
-      class="hk-field-form__text"
       :type="id"
       :id="id"
       :placeholder="placeholder"
@@ -57,19 +56,63 @@ const value = ref(props.modelValue);
   width: 80%;
   gap: rem(20px);
 
-  &__text {
-    width: 100%;
-    border: none;
-    padding: 5px;
-    outline: none;
-    background: transparent;
-
-    &[data-color="light"] {
-      border-bottom: 1px solid $font-color--dark;
-    }
-    &[data-color="dark"] {
-      border-bottom: 1px solid $font-color--light;
-    }
+  input{
+  width: 300px;
+  padding: 10px 20px;
+  border-bottom: 1px solid $font-color--light;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 15px;
+  
+  &[data-color="light"] {
+    border-color: $font-color--light;
+    background: $font-color--light;
+    border-bottom: 1px solid $font-color--dark;
   }
+  &[data-color="dark"] {
+    border-color: $font-color--dark;
+    background: $font-color--dark;
+    border-bottom: 1px solid $font-color--light;
+  }
+}
+
+input:focus{
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+    padding-left: 5px;
+    font-size: 15px;
+    color: #3c3c3c;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+    padding-left: 5px;
+    font-size: 15px;
+    color: #3c3c3c;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+    padding-left: 5px;
+    font-size: 15px;
+    color: #3c3c3c;
+}
+
+input:-ms-input-placeholder {
+    padding-left: 5px;
+    font-size: 15px;
+    color: #3c3c3c;
+}
+
+  &__text {
+  width: 100%;
+  border: none;
+  padding: 5px;
+  outline: none;
+  outline-width: 0;
+  background: transparent;
+  background-color: transparent; /* Agregar esta línea */
+}
 }
 </style>

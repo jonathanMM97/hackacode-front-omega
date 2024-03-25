@@ -8,7 +8,7 @@
         :model-value="state.description"
         :error="test"
         messageError="'Must be at least 10 characters'"
-        :placeholder="$t('dashboard.description-placeholder')"
+        :placeholder="store.getService?.description.length === 0 ? $t('dashboard.description-placeholder') : store.getService?.description"
         @onChange="changeName"
       />
       <FieldForm
@@ -18,12 +18,12 @@
         :model-value="state.destination"
         :error="test"
         messageError="'Must be at least 2 characters'"
-        :placeholder="$t('dashboard.destination-placeholder')"
+        :placeholder="store.getService?.destination.length === 0 ? $t('dashboard.destination-placeholder') : store.getService?.destination"
         @onChange="changeEmail"
       />
-      <DataForm :message-label="$t('dashboard.date-title')" :model-value="state.date" @onChange="changeDate" />
-      <NumberForm :message-label="$t('dashboard.cost-title')" :model-value="state.cost" @onChange="changeCost" />
-      <NumberForm :message-label="$t('dashboard.amount-title')" :model-value="state.amount" @onChange="changeAmount" />
+      <DataForm :message-label="$t('dashboard.date-title')" :model-value="state.date" @onChange="changeDate" :placeholder="store.getService?.serviceDate.length === 0 ? '2024-03-2024' : store.getService?.serviceDateserviceDate" />
+      <NumberForm :message-label="$t('dashboard.cost-title')" :model-value="state.cost" @onChange="changeCost" :placeholder="store.getService?.cost === 0 ? 1 : store.getService?.cost" />
+      <NumberForm :message-label="$t('dashboard.amount-title')" :model-value="state.amount" @onChange="changeAmount" :placeholder="store.getService?.amount === 0 ? 1 : store.getService?.amount" />
       <SelectForm :message-label="$t('dashboard.available-title')" :model-value="state.available" @onChange="changeAvailable" />
       <button class="hk-form-dashboards__button" type="submit">
         <ButtonBlue>Submit</ButtonBlue>
@@ -37,8 +37,11 @@
 import axios from "axios";
 import { object, string } from "yup";
 import { useHackacodeStore } from "~/stores/Hackacode";
-
+const i18n = useI18n();
+const router = useRouter()
 const store = useHackacodeStore();
+const isLogin = store.getShowUserLogin ? '/manage' : '/';
+const redirectPage = i18n.locale.value === 'es' ? isLogin + i18n.locale.value : isLogin;
 const isLoading = ref(false);
 
 const test = ref(false);
@@ -54,17 +57,43 @@ const state = reactive({
   date: "",
   cost: 0,
   amount: 0,
-  available: ""
+  available: true
 });
 const validateForm = async () => {
   isLoading.value = true;
-  await axios.post('http://vps-3991861-x.dattaweb.com:8080/api/service/create', {"amountServ": state.amount, "typeService": (store.getOption as String).toUpperCase(), "description": state.description, "destination": state.destination, "serviceDate": state.date, "cost": state.cost, "active": state.available}, {
-      headers: {
-        Authorization: 'Bearer ' + store.getToken
+  if (store.getOperation !== 'cancel') {
+    await axios.post('http://vps-3991861-x.dattaweb.com:8080/api/service/create', {"amountServ": state.amount, "typeService": (store.getOption as String).toUpperCase(), "description": state.description, "destination": state.destination, "serviceDate": state.date, "cost": state.cost, "active": state.available}, {
+        headers: {
+          Authorization: 'Bearer ' + store.getToken
+        }
+      })
+    } else {
+      if (state.description === "") {
+        state.description = store.getService.description
       }
-    })
-    store.setOperation('search')
+      if (state.destination === "") {
+        state.destination = store.getService.destination
+      }
+      if (state.date === "") {
+        state.date = store.getService.serviceDate
+      }
+      if (state.cost === 0) {
+        state.cost = store.getService.cost
+      }
+      if (state.amount === 0) {
+        state.amount = store.getService.amountServ
+      }
+    await axios.put('http://vps-3991861-x.dattaweb.com:8080/api/service/edit', {"amountServ": state.amount, "typeService": (store.getOption as String).toUpperCase(), "description": state.description, "destination": state.destination, "serviceDate": state.date, "cost": state.cost, "active": state.available}, {
+        headers: {
+          Authorization: 'Bearer ' + store.getToken
+        }
+      })
+
+  }
+  store.setOperation('none');
+  store.setOption('main')
   isLoading.value = false
+  router.push(redirectPage)
 };
 
 const changeName = (value: string) => {
@@ -82,7 +111,7 @@ const changeCost = (value: string) => {
 const changeAmount = (value: string) => {
   state.amount = parseInt(value);
 };
-const changeAvailable = (value: string) => {
+const changeAvailable = (value: boolean) => {
   state.available = value;
 };
 </script>
@@ -91,7 +120,7 @@ const changeAvailable = (value: string) => {
 .hk-form-dashboards {
 
   &[data-color="light"] {
-    color: $font-color--light;
+    color: $font-color--dark;
   }
   &[data-color="dark"] {
     color: $font-color--light;

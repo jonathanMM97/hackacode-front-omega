@@ -7,6 +7,7 @@
       <div class="hk-manage__menu-selected" :data-color="store.getTheme">
         <SelectOption />
       </div>
+      <ShoppingCart />
     </div>
   </main>
 </template>
@@ -55,12 +56,12 @@ const store = useHackacodeStore();
     
     &[data-color="light"] {
       background-color: $font-color--light;
-      box-shadow: 10px 10px 10px rgba($font-color--dark, 0.2);
+      border: 2px solid rgba($font-color--dark, 0.3);
     }
     &[data-color="dark"] {
       background-color: $font-color--dark;
       color: $font-color--light;
-      box-shadow: 10px 10px 10px rgba($font-color--light, 0.2);
+      border: 2px solid rgba($font-color--light, 0.3);
     }
   }
 

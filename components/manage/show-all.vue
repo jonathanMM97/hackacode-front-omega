@@ -76,10 +76,10 @@ const store = useHackacodeStore();
     height: 40px;
     border-radius: rem(10px);
     &[data-color="light"] {
-      box-shadow: 5px 5px 5px rgba($font-color--dark, 0.2);
+      border: 1px solid rgba($font-color--dark, 0.3);
     }
     &[data-color="dark"] {
-      box-shadow: 5px 5px 5px rgba($font-color--light, 0.2);
+      border: 1px solid rgba($font-color--light, 0.3);
       
     }
   }

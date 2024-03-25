@@ -1,7 +1,8 @@
 <template>
   <div class="hk-main-view">
       <InfoProfile class="hk-main-view__info-profile" />
-      <InfoServices class="hk-main-view__info-service" />
+      <InfoServices v-if="store.getCurrentPage !== 'sales'" class="hk-main-view__info-service" />
+      <Sales v-else class="hk-main-view__info-sales" />
   </div>
 </template>
 
